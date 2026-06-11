@@ -253,19 +253,31 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
-    // Page Loader Logic
-    window.addEventListener('load', () => {
-        const loader = document.getElementById('page-loader');
-        if (loader) {
-            loader.style.opacity = '0';
-            setTimeout(() => {
+    // Page Loader Logic — robust version with fallback timeout
+    const hideLoader = (() => {
+        let called = false;
+        return () => {
+            if (called) return;
+            called = true;
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                loader.style.opacity = '0';
                 loader.style.visibility = 'hidden';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    showMoodTracker();
+                }, 600);
+            } else {
                 showMoodTracker();
-            }, 500);
-        } else {
-            showMoodTracker();
-        }
-    });
+            }
+        };
+    })();
+
+    // Trigger on window load (all resources done)
+    window.addEventListener('load', hideLoader);
+
+    // Hard fallback — force-hide after 3.5s no matter what
+    setTimeout(hideLoader, 3500);
 
     // Custom Tennis Cursor Logic
     if (window.innerWidth > 768) {
@@ -365,7 +377,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(renderTime, 1000);
     }
 
-<<<<<<< HEAD
     // ── Weather Clock Widget ────────────────────────────────────────────────
     const widgetTime     = document.getElementById('widget-time');
     const widgetAmpm     = document.getElementById('widget-ampm');
@@ -525,8 +536,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-=======
->>>>>>> e740409 (perubahan 10 juni)
     // Initialize Lenis
     if (typeof Lenis !== 'undefined') {
         const lenis = new Lenis();

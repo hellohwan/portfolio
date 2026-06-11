@@ -10,6 +10,7 @@
     --transition: all 0.3s ease;
 }
 
+/* Lenis Smooth Scrolling */
 /* Lenis Smooth Scrolling & Scroll Snapping */
 html.lenis, html.lenis body {
   height: auto;
@@ -1236,12 +1237,13 @@ body.light-theme .netpoint-footer-bar {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: #ffffff;
+    background: var(--primary-bg, #0a0a0a);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+    pointer-events: auto;
 }
 
 .loader-logo {
