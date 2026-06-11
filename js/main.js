@@ -18,9 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return; // Ignore empty anchor links
+            
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
+            const target = document.querySelector(href);
+            if (target && window.lenis) {
+                window.lenis.scrollTo(target);
+            } else if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
@@ -63,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .collab-item, .mini-exp-card, .premium-card,
         .axa-image-card, .axa-about-container > div,
         .glass-hero-content, .glass-card, .glass-mid-text, .glass-scroll-indicator,
-        .brutal-typo, .brutal-cards
+        .brutal-typo, .brutal-cards, .intro-hybrid-section
     `);
     
     revealElements.forEach(el => {
@@ -360,4 +365,174 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(renderTime, 1000);
     }
 
+    // ── Weather Clock Widget ────────────────────────────────────────────────
+    const widgetTime     = document.getElementById('widget-time');
+    const widgetAmpm     = document.getElementById('widget-ampm');
+    const widgetDay      = document.getElementById('widget-day');
+    const widgetLocation = document.getElementById('widget-location');
+    const widgetStatus   = document.getElementById('widget-status');
+    const widgetTemp     = document.getElementById('widget-temp');
+    const widgetIcon     = document.getElementById('widget-weather-icon');
+    const widgetFeels    = document.getElementById('widget-feels');
+    const widgetWind     = document.getElementById('widget-wind');
+    const widgetPressure = document.getElementById('widget-pressure');
+    const widgetHumidity = document.getElementById('widget-humidity');
+    const widgetSunrise  = document.getElementById('widget-sunrise');
+    const widgetSunset   = document.getElementById('widget-sunset');
+
+    if (widgetTime && widgetAmpm) {
+
+        // ── 1. Real-time clock ──────────────────────────────────────────────
+        const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        const updateWidgetTime = () => {
+            const now   = new Date();
+            let hours   = now.getHours();
+            const mins  = String(now.getMinutes()).padStart(2, '0');
+            const ampm  = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12;
+
+            if (widgetTime) widgetTime.textContent = `${hours}:${mins}`;
+            if (widgetAmpm) widgetAmpm.textContent = ampm;
+            if (widgetDay)  widgetDay.textContent  = dayNames[now.getDay()];
+        };
+        updateWidgetTime();
+        setInterval(updateWidgetTime, 1000);
+
+        // ── 2. WMO weather code → label ─────────────────────────────────────
+        const wmoLabel = code => {
+            if (code === 0)  return 'Clear sky';
+            if (code <= 2)   return 'Partly cloudy';
+            if (code === 3)  return 'Overcast';
+            if (code <= 49)  return 'Foggy';
+            if (code <= 55)  return 'Drizzle';
+            if (code <= 65)  return 'Rainy';
+            if (code <= 77)  return 'Snowy';
+            if (code <= 82)  return 'Showers';
+            if (code <= 99)  return 'Thunderstorm';
+            return 'Unknown';
+        };
+
+        // ── 3. WMO → big icon SVG (64px) ────────────────────────────────────
+        const wmoIcon = code => {
+            const s = '#c4f042', sz = '64';
+            const base = `width="${sz}" height="${sz}" viewBox="0 0 24 24" fill="none" stroke="${s}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"`;
+            if (code === 0)
+                return `<svg ${base}><circle cx="12" cy="12" r="5" fill="${s}" fill-opacity="0.25"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>`;
+            if (code <= 2)
+                return `<svg ${base}><circle cx="8" cy="13" r="4"/><path d="M14.5 8.5a5.5 5.5 0 1 1 0 11H7"/></svg>`;
+            if (code <= 65 || (code >= 80 && code <= 82))
+                return `<svg ${base}>
+                    <path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"/>
+                    <line x1="8" y1="19" x2="8" y2="21"/><line x1="8" y1="13" x2="8" y2="15"/>
+                    <line x1="16" y1="19" x2="16" y2="21"/><line x1="16" y1="13" x2="16" y2="15"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/><line x1="12" y1="15" x2="12" y2="17"/>
+                </svg>`;
+            if (code >= 95)
+                return `<svg ${base}>
+                    <path d="M19 16.9A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"/>
+                    <polyline points="13 11 9 17 15 17 11 23"/>
+                </svg>`;
+            return `<svg ${base}><path d="M17 18a5 5 0 0 0 0-10h-1A7 7 0 1 0 6 18z"/></svg>`;
+        };
+
+        // ── 4. Format sunrise/sunset time ───────────────────────────────────
+        const fmtTime = iso => {
+            const d = new Date(iso);
+            let h = d.getHours(), m = String(d.getMinutes()).padStart(2,'0');
+            const ap = h >= 12 ? 'PM' : 'AM';
+            h = h % 12 || 12;
+            return `${h}:${m} ${ap}`;
+        };
+
+        // ── 5. Fetch full weather from Open-Meteo ────────────────────────────
+        const fetchWeather = async (lat, lon) => {
+            try {
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`
+                    + `&current=temperature_2m,apparent_temperature,weathercode,windspeed_10m,winddirection_10m,surface_pressure,relativehumidity_2m`
+                    + `&daily=sunrise,sunset&timezone=auto&forecast_days=1`;
+                const res  = await fetch(url);
+                const data = await res.json();
+                const c    = data.current;
+
+                const temp  = Math.round(c.temperature_2m);
+                const feels = Math.round(c.apparent_temperature);
+                const code  = c.weathercode;
+                const wind  = Math.round(c.windspeed_10m);
+                const press = Math.round(c.surface_pressure);
+                const hum   = c.relativehumidity_2m;
+
+                if (widgetTemp)     widgetTemp.textContent     = `${temp}°`;
+                if (widgetFeels)    widgetFeels.textContent    = `${feels}°`;
+                if (widgetWind)     widgetWind.textContent     = `${wind} km/h`;
+                if (widgetPressure) widgetPressure.textContent = `${press} MB`;
+                if (widgetHumidity) widgetHumidity.textContent = `${hum}%`;
+                if (widgetStatus)   widgetStatus.textContent   = wmoLabel(code);
+                if (widgetIcon)     widgetIcon.innerHTML        = wmoIcon(code);
+
+                if (data.daily?.sunrise?.[0]) {
+                    if (widgetSunrise) widgetSunrise.textContent = fmtTime(data.daily.sunrise[0]);
+                }
+                if (data.daily?.sunset?.[0]) {
+                    if (widgetSunset) widgetSunset.textContent = fmtTime(data.daily.sunset[0]);
+                }
+            } catch (e) {
+                if (widgetStatus) widgetStatus.textContent = 'Unavailable';
+            }
+        };
+
+        // ── 6. Reverse-geocode city ──────────────────────────────────────────
+        const fetchCity = async (lat, lon) => {
+            try {
+                const res  = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`, { headers: { 'Accept-Language': 'en' } });
+                const data = await res.json();
+                const city = data.address?.city || data.address?.town || data.address?.village || data.address?.county || 'Your Location';
+                if (widgetLocation) widgetLocation.textContent = city;
+            } catch (e) {
+                if (widgetLocation) widgetLocation.textContent = 'Your Location';
+            }
+        };
+
+        // ── 7. Boot: Geolocation → IP fallback ──────────────────────────────
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                pos => {
+                    const { latitude: lat, longitude: lon } = pos.coords;
+                    fetchWeather(lat, lon);
+                    fetchCity(lat, lon);
+                    setInterval(() => fetchWeather(lat, lon), 10 * 60 * 1000);
+                },
+                async () => {
+                    try {
+                        const res  = await fetch('https://ipapi.co/json/');
+                        const data = await res.json();
+                        if (widgetLocation) widgetLocation.textContent = data.city || 'Your Location';
+                        fetchWeather(data.latitude, data.longitude);
+                    } catch (e) {
+                        if (widgetLocation) widgetLocation.textContent = 'Your Location';
+                        if (widgetStatus)   widgetStatus.textContent   = 'Unavailable';
+                    }
+                }
+            );
+        } else {
+            if (widgetLocation) widgetLocation.textContent = 'Your Location';
+            if (widgetStatus)   widgetStatus.textContent   = 'Unavailable';
+        }
+    }
+
+    // Initialize Lenis
+    if (typeof Lenis !== 'undefined') {
+        const lenis = new Lenis();
+        window.lenis = lenis;
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+    }
 });

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -14,58 +14,19 @@
         .lang-selector-minimal button { background: none; border: none; padding: 0; cursor: pointer; color: rgba(255,255,255,0.5); font-family: inherit; font-size: inherit; font-weight: inherit; transition: color 0.2s;}
         .lang-selector-minimal button:hover, .lang-selector-minimal button.active { color: #fff; }
     </style>
+    <script src="js/components.js"></script>
 </head>
 <body>
     <div class="page-loader" id="page-loader">
         <div class="loader-logo">
-            <lottie-player class="thinking-logo" src="cat-loader.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+            <lottie-player class="thinking-logo" src="assets/cat-loader.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
         </div>
     </div>
     
-    <header class="header-wrapper">
-        <div class="top-banner-marquee">
-            <div class="marquee-content">
-                <span>LinkedIn</span> <span class="smiley">☺</span>
-                <span>Facebook</span> <span class="smiley">☺</span>
-                <span>+628777 666 0258</span> <span class="smiley">☺</span>
-                <span>dindahwan@gmail.com</span> <span class="smiley">☺</span>
-                <span>LinkedIn</span> <span class="smiley">☺</span>
-                <span>Facebook</span> <span class="smiley">☺</span>
-                <span>+628777 666 0258</span> <span class="smiley">☺</span>
-                <span>dindahwan@gmail.com</span> <span class="smiley">☺</span>
-            </div>
-        </div>
-        <nav class="navbar awwwards-nav">
-            <div class="nav-left">
-                <a href="index.html" class="logo-w">
-                    <lottie-player class="thinking-logo" src="cat-loader.json" background="transparent" speed="1" loop autoplay></lottie-player>
-                </a>
-                <ul class="nav-links-main">
-                    <li><a href="#work" data-i18n="nav_project">Project</a></li>
-                    <li><a href="#work" data-i18n="nav_karya">Karya</a></li>
-                    <li><a href="#" data-i18n="nav_tulisan">Tulisan Saya</a></li>
-                    <li><a href="resume.html"><span data-i18n="nav_resume">Resume</span> <span class="badge" data-i18n="nav_new">New</span></a></li>
-                </ul>
-            </div>
-            <div class="nav-right">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark/Light Mode">
-                    <span class="icon-sun">☀️</span>
-                    <span class="icon-moon">🌙</span>
-                </button>
-                <div class="lang-selector-minimal">
-                    <button data-lang="id" class="active">ID</button>
-                    <span>/</span>
-                    <button data-lang="en">EN</button>
-                    <span>/</span>
-                    <button data-lang="zh">ZH</button>
-                </div>
-                <a href="#contact" class="btn-primary btn-nav" data-i18n="nav_contact">Hubungi Saya</a>
-            </div>
-        </nav>
-    </header>
+    <global-navbar></global-navbar>
 
     <main>
-        <section class="hero-netpoint" style="background-image: url('tennis_hero_bg.png'); display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;">
+        <section class="hero-netpoint" id="hero-netpoint" style="display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;">
             <div class="netpoint-content">
                 <div class="netpoint-left">
                     <!-- <div class="netpoint-quote-box">
@@ -76,11 +37,102 @@
                         </div>
                         <p>You don't win every point just always believe in the next one. 🎾</p>
                     </div> -->
-                    <h1 class="netpoint-heading">Design Like a Champion.<br>Play With Confidence.</h1>
+                    <!-- Psalm 19:14 Typographic Layout Style -->
+                    <div class="netpoint-editorial-layout">
+                        <!-- Orange Sun & Sparkle Stars background elements -->
+                        <div class="netpoint-editorial-bg">
+                            <div class="editorial-sun"></div>
+                            <div class="editorial-sparkle s1">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5Z"/></svg>
+                            </div>
+                            <div class="editorial-sparkle s2">
+                                <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5Z"/></svg>
+                            </div>
+                            <div class="editorial-sparkle s3">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5Z"/></svg>
+                            </div>
+                        </div>
+
+                        <!-- Structured Text Grid -->
+                        <div class="editorial-text-wrapper">
+                            <div class="editorial-row sub-row-1">design 💻</div>
+                            <div class="editorial-row main-row-1">like a <br> <span style="white-space: nowrap;">champion 🎾</span></div>
+                            <div class="editorial-row sub-row-2">and show with</div>
+                            <div class="editorial-row main-row-2">confidence</div>
+                            <div class="editorial-row desc-row">
+                                <p>It’s not just about design —<br> it’s about showing who you really are. <br>Stay bold, stay confident, <br>and let your creativity be the main character.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="netpoint-right">
-                    <p class="np-desc">A world-class design portfolio helping brands of all sizes master aesthetics, UX, and digital strength.</p>
+
+                    <!-- Weather & Clock Widget -->
+                    <div class="np-weather-card">
+                        <div class="weather-card-content">
+
+                            <!-- Top: Day + Time -->
+                            <div class="wc-top-row">
+                                <span class="wc-day" id="widget-day">--</span>
+                                <div class="wc-time-group">
+                                    <span class="wc-time" id="widget-time">--:--</span>
+                                    <span class="wc-ampm" id="widget-ampm">--</span>
+                                </div>
+                            </div>
+
+                            <!-- Middle: Temp + Icon -->
+                            <div class="wc-main-row">
+                                <span class="wc-temp" id="widget-temp">--°</span>
+                                <div class="wc-icon" id="widget-weather-icon">
+                                    <!-- icon updated dynamically -->
+                                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#c4f042" stroke-width="1.5" stroke-linecap="round">
+                                        <circle cx="12" cy="12" r="5" fill="#c4f042" fill-opacity="0.2"/>
+                                        <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                        <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+                                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Detail grid -->
+                            <div class="wc-details-grid">
+                                <div class="wc-detail-item">
+                                    <span class="wc-label">Real Feel</span>
+                                    <span class="wc-value" id="widget-feels">--°</span>
+                                </div>
+                                <div class="wc-detail-item">
+                                    <span class="wc-label">Sunrise</span>
+                                    <span class="wc-value" id="widget-sunrise">--</span>
+                                </div>
+                                <div class="wc-detail-item">
+                                    <span class="wc-label">Wind</span>
+                                    <span class="wc-value" id="widget-wind">--</span>
+                                </div>
+                                <div class="wc-detail-item">
+                                    <span class="wc-label">Sunset</span>
+                                    <span class="wc-value" id="widget-sunset">--</span>
+                                </div>
+                                <div class="wc-detail-item">
+                                    <span class="wc-label">Pressure</span>
+                                    <span class="wc-value" id="widget-pressure">--</span>
+                                </div>
+                                <div class="wc-detail-item">
+                                    <span class="wc-label">Humidity</span>
+                                    <span class="wc-value" id="widget-humidity">--</span>
+                                </div>
+                            </div>
+
+                            <!-- Location + status bottom -->
+                            <div class="wc-location-row">
+                                <span class="wc-location" id="widget-location">Detecting...</span>
+                                <span class="wc-status" id="widget-status">--</span>
+                            </div>
+
+                        </div>
+                    </div>
+
                     <div class="np-refer-card">
                         <h3 class="np-refer-title">Refer a friends</h3>
                         <p class="np-refer-desc">Share your referral link with friends</p>
@@ -840,19 +892,78 @@
                 <!-- Right Side Cards -->
                 <div class="axa-cards-wrapper">
                     <!-- Card 1 -->
-                    <div class="axa-image-card reveal" style="background-image: url('educaa_portrait.png'); transition-delay: 100ms;">
+                    <div class="axa-image-card reveal" style="background-image: url('assets/educaa_portrait.png'); transition-delay: 100ms;">
                         <div class="axa-card-overlay"></div>
                         <h3 class="axa-card-title">4.9/5 <br> <span style="font-size: 1.1rem; font-weight: 400; opacity: 0.9;" data-i18n="home_about_sat">Kepuasan</span></h3>
                         <div class="axa-card-btn">View details &rarr;</div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="axa-image-card reveal" style="background-image: url('tennis_hero_bg.png'); transition-delay: 200ms;">
+                    <div class="axa-image-card reveal" style="background-image: url('assets/tennis_hero_bg.png'); transition-delay: 200ms;">
                         <div class="axa-card-overlay"></div>
                         <h3 class="axa-card-title">50+ <br> <span style="font-size: 1.1rem; font-weight: 400; opacity: 0.9;" data-i18n="home_about_proj">Proyek Selesai</span></h3>
                         <div class="axa-card-btn">View details &rarr;</div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="blog-section reveal" id="insights">
+            <div class="blog-header">
+                <div class="blog-header-left">
+                    <h2 class="huge-title">INSIGHTS & IDEAS</h2>
+                </div>
+                <div class="blog-header-right">
+                    <span class="blog-arrow">↗</span>
+                    <p class="blog-intro-desc">Thoughts, strategies, and practical insights on design, technology, and digital growth written from real project experience.</p>
+                </div>
+            </div>
+            
+            <div class="blog-grid">
+                <!-- Card 1 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrap">
+                        <img src="assets/blog_desert.png" alt="UX Principles That Convert">
+                    </div>
+                    <div class="blog-card-content">
+                        <h3>UX Principles That Convert</h3>
+                        <div class="blog-meta">
+                            <span class="blog-tag">Design</span>
+                            <span class="blog-dot">•</span>
+                            <span class="blog-date">Apr 19, 2026</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrap">
+                        <img src="assets/blog_corgis.png" alt="Brand Identity Beyond the Logo">
+                    </div>
+                    <div class="blog-card-content">
+                        <h3>Brand Identity Beyond the Logo</h3>
+                        <div class="blog-meta">
+                            <span class="blog-tag">Design</span>
+                            <span class="blog-dot">•</span>
+                            <span class="blog-date">Apr 19, 2026</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrap">
+                        <img src="assets/blog_heatmap.png" alt="Conversion Optimization for Websites">
+                    </div>
+                    <div class="blog-card-content">
+                        <h3>Conversion Optimization for Websites</h3>
+                        <div class="blog-meta">
+                            <span class="blog-tag">Design</span>
+                            <span class="blog-dot">•</span>
+                            <span class="blog-date">Apr 19, 2026</span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -865,82 +976,10 @@
         </section>
     </main>
 
-    <footer class="footer-wrapper">
-        <div class="footer-dark">
-            <!-- Top Right Cutout (White) -->
-            <div class="cutout-tr">
-                <!-- Social Icons placed here -->
-                <div class="social-icons">
-                    <a href="#">▶</a>
-                    <a href="#">f</a>
-                    <a href="#">X</a>
-                    <a href="#">ig</a>
-                </div>
-            </div>
+    <global-footer></global-footer>
 
-            <!-- Bottom Left Cutout (White) -->
-            <div class="cutout-bl">
-                <!-- Copyright placed here -->
-                <div class="copyright-text">
-                    <p data-i18n="footer_copyright">Copyright &copy; 2026 Your Name. All Rights Reserved.</p>
-                </div>
-            </div>
-
-            <div class="footer-content-grid">
-                <!-- Left Side -->
-                <div class="footer-left">
-                    <p class="pre-heading" data-i18n="footer_pre">Interactive designs — accessible anytime, anywhere.</p>
-                    <h1 class="huge-heading" data-i18n="footer_huge">Designing Since 2016</h1>
-                    
-                    <!-- <div class="newsletter">
-                        <p class="ns-title" data-i18n="footer_ns_title">Subscribe newsletter</p>
-                        <p class="ns-desc" data-i18n="footer_ns_desc">Subscribe to our newsletter to get the latest news and updates!</p>
-                        <form class="ns-form">
-                            <span class="ns-icon">✉</span>
-                            <input type="email" placeholder="enter your email">
-                            <button type="button" data-i18n="footer_ns_btn">Subscribe</button>
-                        </form>
-                    </div> -->
-
-                    <div class="footer-logo">
-                        <lottie-player class="thinking-logo" src="cat-loader.json" background="transparent" speed="1" style="width: 44px; height: 44px;" loop autoplay></lottie-player>
-                        <p data-i18n="footer_logo_desc">Master in-demand tech, business, and creative skills</p>
-                    </div>
-                </div>
-
-                <!-- Right Side Links -->
-                <div class="footer-right">
-                    <div class="link-column">
-                        <h4 data-i18n="footer_col1">Quick Links</h4>
-                        <a href="#" data-i18n="footer_col1_1">Our portfolio</a>
-                        <a href="#" data-i18n="footer_col1_2">Our story</a>
-                        <a href="#" data-i18n="footer_col1_3">Our process</a>
-                        <a href="#" data-i18n="footer_col1_4">Testimonials</a>
-                        <a href="#" data-i18n="footer_col1_5">Contact us</a>
-                    </div>
-                    <div class="link-column">
-                        <h4 data-i18n="footer_col2">More</h4>
-                        <a href="#" data-i18n="footer_col2_1">Blogs</a>
-                        <a href="#" data-i18n="footer_col2_2">Jobs</a>
-                    </div>
-                    <div class="link-column">
-                        <h4 data-i18n="footer_col3">Legal & Policy Links</h4>
-                        <a href="#" data-i18n="footer_col3_1">Our rules</a>
-                        <a href="#" data-i18n="footer_col3_2">Our statement</a>
-                        <a href="#" data-i18n="footer_col3_3">Feedback</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom-links">
-                <a href="#" data-i18n="footer_bot_1">Privacy policy</a>
-                <a href="#" data-i18n="footer_bot_2">Terms and conditions</a>
-                <a href="#" data-i18n="footer_bot_3">Copyright</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="translations.js"></script>
-    <script src="main.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

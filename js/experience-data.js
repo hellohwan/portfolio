@@ -22,7 +22,7 @@ const experienceData = {
 
 // Placeholder images for the deliverables
 const placeholderImages = [
-    'immersive_mockup.png',
+    'assets/immersive_mockup.png',
     'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=400&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=400&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=400&auto=format&fit=crop',
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
             grid.innerHTML = '';
             
             // Randomize images but keep AXA using actual mockup if available
-            const availableMockups = currentItem.id === 'axa' ? ['immersive_mockup.png'] : [];
+            const availableMockups = currentItem.id === 'axa' ? ['assets/immersive_mockup.png'] : [];
             const numImages = 3 + Math.floor(Math.random() * 2); // 3 to 4 images
             
             for (let i = 0; i < numImages; i++) {

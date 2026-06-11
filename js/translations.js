@@ -116,7 +116,7 @@ const translations = {
         "res_exp_6_desc": "create a display for a mobile (UI/ UX) application and also create a sales application using WordPress-based",
         "res_exp_7_desc": "create UI / UX views and also develop company websites using wordpress based",
 
-        "res_collab": "AND OTHERS BACK THEN MY COLLABORATION WITH THESE COMPANY",
+        "res_collab": "PAST COLLABORATION",
         "res_collab_1_desc": "create wireframe for internal project, for website & also mobile application. Lead the product & egineer team",
         "res_collab_2_desc": "create and design display applications for mobile and also websites, related to online gaming. and also create various displays for social media, as well as campaigns",
         "res_collab_3_desc": "create a website based on a framework related to company needs and support all of the subsidiaries. Using worpdress & wix",
@@ -243,7 +243,7 @@ const translations = {
         "res_exp_6_desc": "membuat tampilan untuk aplikasi seluler (UI/ UX) dan juga aplikasi penjualan berbasis WordPress",
         "res_exp_7_desc": "membuat tampilan UI / UX dan juga mengembangkan website perusahaan berbasis wordpress",
 
-        "res_collab": "DAN KOLABORASI LAINNYA DI MASA LALU DENGAN PERUSAHAAN INI",
+        "res_collab": "PAST COLLABORATION",
         "res_collab_1_desc": "membuat wireframe untuk proyek internal, untuk website & aplikasi seluler. Memimpin tim produk & teknisi",
         "res_collab_2_desc": "membuat dan merancang aplikasi tampilan untuk seluler dan website yang berkaitan dengan game online. serta kampanye media sosial",
         "res_collab_3_desc": "membuat website berdasarkan framework yang relevan dengan kebutuhan perusahaan. Menggunakan wordpress & wix",

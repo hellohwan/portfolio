@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Portofolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resume.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -276,55 +276,15 @@
         }
 
     </style>
+    <script src="js/components.js"></script>
 </head>
 <body class="resume-body">
     <div class="page-loader" id="page-loader">
         <div class="loader-logo">
-            <lottie-player class="thinking-logo" src="cat-loader.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+            <lottie-player class="thinking-logo" src="assets/cat-loader.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
         </div>
     </div>
-    <header class="header-wrapper">
-        <div class="top-banner-marquee">
-            <div class="marquee-content">
-                <span>LinkedIn</span> <span class="smiley">☺</span>
-                <span>Facebook</span> <span class="smiley">☺</span>
-                <span>+628777 666 0258</span> <span class="smiley">☺</span>
-                <span>dindahwan@gmail.com</span> <span class="smiley">☺</span>
-                <span>LinkedIn</span> <span class="smiley">☺</span>
-                <span>Facebook</span> <span class="smiley">☺</span>
-                <span>+628777 666 0258</span> <span class="smiley">☺</span>
-                <span>dindahwan@gmail.com</span> <span class="smiley">☺</span>
-            </div>
-        </div>
-        <nav class="navbar awwwards-nav">
-            <div class="nav-left">
-                <a href="index.html" class="logo-w">
-                    <lottie-player class="thinking-logo" src="cat-loader.json" background="transparent" speed="1" loop autoplay></lottie-player>
-                </a>
-                <ul class="nav-links-main">
-                    <li><a href="index.html#work" data-i18n="nav_project">Project</a></li>
-                    <li><a href="index.html#work" data-i18n="nav_karya">Karya</a></li>
-                    <li><a href="#" data-i18n="nav_tulisan">Tulisan Saya</a></li>
-                    <li><a href="resume.html"><span data-i18n="nav_resume">Resume</span> <span class="badge" data-i18n="nav_new">New</span></a></li>
-                </ul>
-            </div>
-
-            <div class="nav-right">
-                <button class="theme-toggle" id="theme-toggle-resume" aria-label="Toggle Dark/Light Mode" style="border-radius: 50px; width: auto; padding: 0 16px; gap: 8px;">
-                    <span class="icon-sun">☀️ Light</span>
-                    <span class="icon-moon">🌙 Dark</span>
-                </button>
-                <div class="lang-selector-minimal">
-                    <button data-lang="id" class="active">ID</button>
-                    <span>/</span>
-                    <button data-lang="en">EN</button>
-                    <span>/</span>
-                    <button data-lang="zh">ZH</button>
-                </div>
-                <a href="index.html#contact" class="btn-black" data-i18n="nav_contact">Hubungi Saya</a>
-            </div>
-        </nav>
-    </header>
+    <global-navbar page="resume"></global-navbar>
 
         <!-- About Me Section -->
         <div class="about-ticker-container">
@@ -335,40 +295,41 @@
             <!-- Dribbble Showcase Background -->
             <div class="dribbble-showcase-bg">
                 <div class="showcase-column">
-                    <div class="showcase-card" style="background-image: url('educaa_mockup.png');"></div>
-                    <div class="showcase-card" style="background-image: url('immersive_mockup.png');"></div>
-                    <div class="showcase-card" style="background-image: url('hero_mockup_screens.png');"></div>
-                    <div class="showcase-card" style="background-image: url('prev_screen_1780767147349.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/educaa_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/immersive_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/hero_mockup_screens.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/prev_screen_1780767147349.png');"></div>
                     <!-- Duplicate for infinite loop -->
-                    <div class="showcase-card" style="background-image: url('educaa_mockup.png');"></div>
-                    <div class="showcase-card" style="background-image: url('immersive_mockup.png');"></div>
-                    <div class="showcase-card" style="background-image: url('hero_mockup_screens.png');"></div>
-                    <div class="showcase-card" style="background-image: url('prev_screen_1780767147349.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/educaa_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/immersive_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/hero_mockup_screens.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/prev_screen_1780767147349.png');"></div>
                 </div>
                 <div class="showcase-column">
-                    <div class="showcase-card" style="background-image: url('hero_mockup_screens.png');"></div>
-                    <div class="showcase-card" style="background-image: url('prev_screen_1780767147349.png');"></div>
-                    <div class="showcase-card" style="background-image: url('educaa_mockup.png');"></div>
-                    <div class="showcase-card" style="background-image: url('immersive_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/hero_mockup_screens.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/prev_screen_1780767147349.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/educaa_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/immersive_mockup.png');"></div>
                     <!-- Duplicate for infinite loop -->
-                    <div class="showcase-card" style="background-image: url('hero_mockup_screens.png');"></div>
-                    <div class="showcase-card" style="background-image: url('prev_screen_1780767147349.png');"></div>
-                    <div class="showcase-card" style="background-image: url('educaa_mockup.png');"></div>
-                    <div class="showcase-card" style="background-image: url('immersive_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/hero_mockup_screens.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/prev_screen_1780767147349.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/educaa_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/immersive_mockup.png');"></div>
                 </div>
                 <div class="showcase-column">
-                    <div class="showcase-card" style="background-image: url('immersive_mockup.png');"></div>
-                    <div class="showcase-card" style="background-image: url('educaa_mockup.png');"></div>
-                    <div class="showcase-card" style="background-image: url('prev_screen_1780767147349.png');"></div>
-                    <div class="showcase-card" style="background-image: url('hero_mockup_screens.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/immersive_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/educaa_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/prev_screen_1780767147349.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/hero_mockup_screens.png');"></div>
                     <!-- Duplicate for infinite loop -->
-                    <div class="showcase-card" style="background-image: url('immersive_mockup.png');"></div>
-                    <div class="showcase-card" style="background-image: url('educaa_mockup.png');"></div>
-                    <div class="showcase-card" style="background-image: url('prev_screen_1780767147349.png');"></div>
-                    <div class="showcase-card" style="background-image: url('hero_mockup_screens.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/immersive_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/educaa_mockup.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/prev_screen_1780767147349.png');"></div>
+                    <div class="showcase-card" style="background-image: url('assets/hero_mockup_screens.png');"></div>
                 </div>
             </div>
             <style>
+                @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
                 .about-ticker-container {
                     --hero-text-title: #ffffff;
                     --hero-text-desc: rgba(255, 255, 255, 0.9);
@@ -534,6 +495,25 @@
                     object-fit: cover;
                     display: block;
                 }
+                .hero-image-wrapper {
+                    width: 100%;
+                    max-width: 450px;
+                    border-radius: 24px;
+                    overflow: hidden;
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                    aspect-ratio: 1 / 1;
+                }
+                .hero-concept-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+                body.light-theme .hero-image-wrapper {
+                    border-color: rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+                }
 
                 /* Left Side */
                 .about-hero-left {
@@ -570,22 +550,68 @@
                     margin-top: 0.25rem;
                 }
                 
-                .hero-pill-item {
-                    background-color: #ffffff;
-                    color: #000000;
-                    padding: 8px 18px;
-                    border-radius: 50px;
-                    font-family: var(--font-heading);
-                    font-weight: 700;
-                    font-size: 0.8rem;
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-                    border: 1px solid rgba(255,255,255,0.2);
-                    white-space: nowrap;
+                /* Concept Sticker/Typo Layout matching Reference Image */
+                .hero-sticker-layout {
+                    position: relative;
+                    padding: 2.5rem 1.5rem;
+                    display: inline-block;
+                    margin-bottom: 2rem;
+                    width: 100%;
+                    max-width: 550px;
+                    box-sizing: border-box;
                 }
-                
-                body.light-theme .hero-pill-item {
-                    background-color: #0f172a;
-                    color: #ffffff;
+                .sticker-main-title {
+                    font-family: var(--font-heading);
+                    font-weight: 900;
+                    font-size: clamp(3.5rem, 8.5vw, 6.8rem);
+                    color: #009e49; /* Bold solid green */
+                    line-height: 0.82;
+                    text-transform: none;
+                    letter-spacing: -4px;
+                    margin: 0;
+                }
+                .sticker-smiley {
+                    position: absolute;
+                    top: 0px;
+                    left: -40px;
+                    color: #009e49;
+                    transform: rotate(-10deg);
+                    display: inline-block;
+                }
+                .sticker-badge {
+                    background-color: #0022ff; /* Bold solid blue */
+                    color: #ffffff !important;
+                    font-family: var(--font-heading);
+                    font-weight: 900;
+                    font-size: 1.05rem;
+                    padding: 6px 14px;
+                    position: absolute;
+                    white-space: nowrap;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    border-radius: 4px;
+                    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+                    z-index: 2;
+                }
+                .sticker-badge.b1 {
+                    top: 45px;
+                    right: -10px;
+                    transform: rotate(5deg);
+                }
+                .sticker-badge.b2 {
+                    top: 110px;
+                    left: -35px;
+                    transform: rotate(-6deg);
+                }
+                .sticker-badge.b3 {
+                    bottom: 95px;
+                    right: -30px;
+                    transform: rotate(4deg);
+                }
+                .sticker-badge.b4 {
+                    bottom: -15px;
+                    left: 45%;
+                    transform: translateX(-50%) rotate(-3deg);
                 }
                 
                 .hero-stats-row {
@@ -823,7 +849,7 @@
                     width: 110px;
                     height: 115px;
                     border-radius: 14px;
-                    background-image: url('champ_small_1780765834180.png');
+                    background-image: url('assets/champ_small_1780765834180.png');
                     background-size: cover;
                     background-position: center;
                 }
@@ -1006,14 +1032,28 @@
                 <!-- Left Column (Mockup Quote & Sports Headline) -->
                 <div class="about-hero-left">
                     <p class="hero-resume-tag">Resume 2025</p>
-                    <h1 class="hero-resume-name">Dinda Hwan</h1>
-                    
-                    <!-- Capsule pills -->
-                    <div class="hero-pills-row">
-                        <span class="hero-pill-item">UI/UX Designer</span>
-                        <span class="hero-pill-item">Programmer</span>
-                        <span class="hero-pill-item">Digital Marketer</span>
-                        <span class="hero-pill-item">Jakarta, Indonesia</span>
+                    <!-- Concept Sticker/Typo Layout matching Reference Image -->
+                    <div class="hero-sticker-layout">
+                        <!-- Smiley face decoration -->
+                        <span class="sticker-smiley">
+                            <svg width="55" height="55" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="4.5">
+                                <circle cx="30" cy="30" r="27" />
+                                <circle cx="21" cy="22" r="3.5" fill="currentColor" />
+                                <circle cx="39" cy="22" r="3.5" fill="currentColor" />
+                                <path d="M18 36 Q30 46, 42 36" stroke-linecap="round" />
+                            </svg>
+                        </span>
+
+                        <!-- Main Big Text: Dinda Hwan -->
+                        <h1 class="sticker-main-title">
+                            Dinda<br>Hwan
+                        </h1>
+
+                        <!-- Blue Badges -->
+                        <div class="sticker-badge b1">UI/UX</div>
+                        <div class="sticker-badge b2">PROGRAMMER</div>
+                        <div class="sticker-badge b3">MARKETING</div>
+                        <div class="sticker-badge b4">JAKARTA</div>
                     </div>
 
                     <!-- Statistics section -->
@@ -1033,18 +1073,10 @@
                 <div class="about-hero-right">
                     <p class="hero-desc-p" data-i18n="res_about_p1">👋 Halo! Saya seorang desainer yang bisa coding — tenaga kreatif hibrida dengan pengalaman hampir satu dekade dalam menciptakan pengalaman digital yang elegan dan bermakna.</p>
                     
-                    <!-- LinkedIn Profile Card -->
-                    <a href="https://www.linkedin.com/in/pratikadinda/" target="_blank" class="app-store-card linkedin-card">
-                        <div class="app-logo profile-photo-wrap">
-                            <img src="educaa_portrait.png" alt="Pratika Dinda" class="profile-photo">
-                        </div>
-                        <div class="app-info">
-                            <h4 class="app-title">Pratika Dinda</h4>
-                            <p class="app-subtitle">UI/UX Designer & Frontend Developer</p>
-                            <span class="app-btn-get" style="background-color: #0077b5;">CONNECT</span>
-                        </div>
-                    </a>
-                    
+                    <div class="hero-image-wrapper">
+                        <img src="assets/keyboard_concept.png" alt="Keyboard Concept Illustration" class="hero-concept-img">
+                    </div>
+
                     <div class="hero-actions-card">
                         <a href="index.html#contact" class="hero-capsule-btn">
                             <span data-i18n="hero_book_now">Book Now</span>
@@ -1105,9 +1137,337 @@
             </div>
         </div>
 
+        <!-- New Intro Section (Added before Background) -->
+        <section class="intro-hybrid-section" style="display: none;">
+            <style>
+                .intro-hybrid-section {
+                    background-color: #0a0a0a;
+                    padding-top: 6rem;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .intro-hybrid-top {
+                    padding: 0 5%;
+                    max-width: 1400px;
+                    margin: 0 auto 4rem auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 4rem;
+                }
+                .intro-hybrid-left {
+                    flex: 1.2;
+                }
+                .intro-hybrid-num {
+                    font-family: var(--font-heading);
+                    font-size: 0.9rem;
+                    font-weight: 800;
+                    margin-bottom: 1.5rem;
+                    display: block;
+                    color: #fff;
+                }
+                .intro-hybrid-title {
+                    font-family: var(--font-heading);
+                    font-size: clamp(2rem, 4.5vw, 4rem);
+                    font-weight: 900;
+                    line-height: 1.05;
+                    color: #fff;
+                    margin: 0;
+                    text-transform: uppercase;
+                    letter-spacing: -1px;
+                }
+                .intro-hybrid-right {
+                    flex: 1;
+                    padding-top: 4.5rem;
+                }
+                .intro-hybrid-desc {
+                    font-family: var(--font-body);
+                    font-size: 1.05rem;
+                    line-height: 1.8;
+                    color: #e5e5e5;
+                    font-weight: 600;
+                    margin-bottom: 1.5rem;
+                }
+                .intro-hybrid-bottom {
+                    background-color: #171717;
+                    padding: 4rem 5%;
+                }
+                .intro-hybrid-bottom-inner {
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 1.2rem;
+                }
+                .intro-info-card {
+                    background-color: #f3efe6;
+                    border-radius: 8px;
+                    padding: 2rem 1.5rem;
+                    color: #111;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    transition: transform 0.3s ease;
+                }
+                .intro-info-card:hover {
+                    transform: translateY(-5px);
+                }
+                .intro-info-card h3 {
+                    font-family: var(--font-heading);
+                    font-size: 1.4rem;
+                    font-weight: 800;
+                    margin-bottom: 1.5rem;
+                    color: #111;
+                }
+                .intro-info-item {
+                    font-family: var(--font-body);
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    line-height: 1.5;
+                    margin-bottom: 1.2rem;
+                    color: #222;
+                }
+                .intro-info-item:last-child {
+                    margin-bottom: 0;
+                }
+                body.light-theme .intro-hybrid-section {
+                    background-color: #ffffff;
+                }
+                body.light-theme .intro-hybrid-num,
+                body.light-theme .intro-hybrid-title {
+                    color: #111;
+                }
+                body.light-theme .intro-hybrid-desc {
+                    color: #444;
+                }
+                body.light-theme .intro-hybrid-bottom {
+                    background-color: #f9f9f9;
+                }
+                @media (max-width: 1024px) {
+                    .intro-hybrid-top {
+                        flex-direction: column;
+                        gap: 2rem;
+                    }
+                    .intro-hybrid-bottom-inner {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1.5rem;
+                    }
+                    .intro-hybrid-right {
+                        padding-top: 0;
+                    }
+                }
+                @media (max-width: 600px) {
+                    .intro-hybrid-bottom-inner {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+
+            <div class="intro-hybrid-top">
+                <div class="intro-hybrid-left">
+                    <span class="intro-hybrid-num">01</span>
+                    <h2 class="intro-hybrid-title">SOLVING<br>PROBLEMS<br>THROUGH ARTFUL<br>SYSTEMS AND<br>INTERFACES.</h2>
+                </div>
+                <div class="intro-hybrid-right">
+                    <p class="intro-hybrid-desc">Hello, I am a designer who codes - a hybrid creative with nearly a decade of crafting elegant, meaningful digital experiences.</p>
+                    <p class="intro-hybrid-desc">Whether it is sculpting intuitive interfaces or engineering fluid systems, I bring ideas into pixels and transform complex journeys into products that feel seamless.</p>
+                    <p class="intro-hybrid-desc">I work where business strategy, marketing psychology, and UX/UI design converge, with a focus on experiences that users enjoy and products that thrive.</p>
+                </div>
+            </div>
+
+            <div class="intro-hybrid-bottom">
+                <div class="intro-hybrid-bottom-inner">
+                    <div class="intro-info-card">
+                        <h3>Contact</h3>
+                        <div class="intro-info-item">Whatsapp: 08777 6660 258</div>
+                        <div class="intro-info-item">Email: hellohwan26@outlook.com</div>
+                        <div class="intro-info-item">LinkedIn: Dinda Pratika</div>
+                    </div>
+                    <div class="intro-info-card">
+                        <h3>Education</h3>
+                        <div class="intro-info-item">Binus Nusantara, Jakarta</div>
+                        <div class="intro-info-item">Bachelor of Accounting (S.E)</div>
+                        <div class="intro-info-item">Bachelor of Information System (S.Kom)</div>
+                    </div>
+                    <div class="intro-info-card">
+                        <h3>Certification & Course</h3>
+                        <div class="intro-info-item">UX: The Beginner's Guide - 2016</div>
+                        <div class="intro-info-item">ASPT .NET #C Intermediate - 2018</div>
+                    </div>
+                    <div class="intro-info-card">
+                        <h3>Activities</h3>
+                        <div class="intro-info-item">Yayasan Buddha Tzu Chi Indonesia - Volunteer</div>
+                        <div class="intro-info-item">Ekayana Peduli - Volunteer</div>
+                        <div class="intro-info-item">AIESEC - Manager GDIP Exchange Program</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <main class="resume-main">
+            <style>
+                .intro-hybrid-section {
+                    background-color: #0a0a0a;
+                    padding-top: 6rem;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .intro-hybrid-top {
+                    padding: 0 5%;
+                    max-width: 1400px;
+                    margin: 0 auto 4rem auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 4rem;
+                }
+                .intro-hybrid-left {
+                    flex: 1.2;
+                }
+                .intro-hybrid-num {
+                    font-family: var(--font-heading);
+                    font-size: 0.9rem;
+                    font-weight: 800;
+                    margin-bottom: 1.5rem;
+                    display: block;
+                    color: #fff;
+                }
+                .intro-hybrid-title {
+                    font-family: var(--font-heading);
+                    font-size: clamp(2rem, 4.5vw, 4rem);
+                    font-weight: 900;
+                    line-height: 1.05;
+                    color: #fff;
+                    margin: 0;
+                    text-transform: uppercase;
+                    letter-spacing: -1px;
+                }
+                .intro-hybrid-right {
+                    flex: 1;
+                    padding-top: 4.5rem;
+                }
+                .intro-hybrid-desc {
+                    font-family: var(--font-body);
+                    font-size: 1.05rem;
+                    line-height: 1.8;
+                    color: #e5e5e5;
+                    font-weight: 600;
+                    margin-bottom: 1.5rem;
+                }
+                .intro-hybrid-bottom {
+                    background-color: #171717;
+                    padding: 4rem 5%;
+                }
+                .intro-hybrid-bottom-inner {
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 1.2rem;
+                }
+                .intro-info-card {
+                    background-color: #f3efe6;
+                    border-radius: 8px;
+                    padding: 2rem 1.5rem;
+                    color: #111;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    transition: transform 0.3s ease;
+                }
+                .intro-info-card:hover {
+                    transform: translateY(-5px);
+                }
+                .intro-info-card h3 {
+                    font-family: var(--font-heading);
+                    font-size: 1.4rem;
+                    font-weight: 800;
+                    margin-bottom: 1.5rem;
+                    color: #111;
+                }
+                .intro-info-item {
+                    font-family: var(--font-body);
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    line-height: 1.5;
+                    margin-bottom: 1.2rem;
+                    color: #222;
+                }
+                .intro-info-item:last-child {
+                    margin-bottom: 0;
+                }
+                body.light-theme .intro-hybrid-section {
+                    background-color: #ffffff;
+                }
+                body.light-theme .intro-hybrid-num,
+                body.light-theme .intro-hybrid-title {
+                    color: #111;
+                }
+                body.light-theme .intro-hybrid-desc {
+                    color: #444;
+                }
+                body.light-theme .intro-hybrid-bottom {
+                    background-color: #f9f9f9;
+                }
+                @media (max-width: 1024px) {
+                    .intro-hybrid-top {
+                        flex-direction: column;
+                        gap: 2rem;
+                    }
+                    .intro-hybrid-bottom-inner {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1.5rem;
+                    }
+                    .intro-hybrid-right {
+                        padding-top: 0;
+                    }
+                }
+                @media (max-width: 600px) {
+                    .intro-hybrid-bottom-inner {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+
+            <div class="intro-hybrid-top">
+                <div class="intro-hybrid-left">
+                    <span class="intro-hybrid-num">01</span>
+                    <h2 class="intro-hybrid-title">SOLVING<br>PROBLEMS<br>THROUGH ARTFUL<br>SYSTEMS AND<br>INTERFACES.</h2>
+                </div>
+                <div class="intro-hybrid-right">
+                    <p class="intro-hybrid-desc">Hello, I am a designer who codes - a hybrid creative with nearly a decade of crafting elegant, meaningful digital experiences.</p>
+                    <p class="intro-hybrid-desc">Whether it is sculpting intuitive interfaces or engineering fluid systems, I bring ideas into pixels and transform complex journeys into products that feel seamless.</p>
+                    <p class="intro-hybrid-desc">I work where business strategy, marketing psychology, and UX/UI design converge, with a focus on experiences that users enjoy and products that thrive.</p>
+                </div>
+            </div>
+
+            <div class="intro-hybrid-bottom">
+                <div class="intro-hybrid-bottom-inner">
+                    <div class="intro-info-card">
+                        <h3>Contact</h3>
+                        <div class="intro-info-item">Whatsapp: 08777 6660 258</div>
+                        <div class="intro-info-item">Email: hellohwan26@outlook.com</div>
+                        <div class="intro-info-item">LinkedIn: Dinda Pratika</div>
+                    </div>
+                    <div class="intro-info-card">
+                        <h3>Education</h3>
+                        <div class="intro-info-item">Binus Nusantara, Jakarta</div>
+                        <div class="intro-info-item">Bachelor of Accounting (S.E)</div>
+                        <div class="intro-info-item">Bachelor of Information System (S.Kom)</div>
+                    </div>
+                    <div class="intro-info-card">
+                        <h3>Certification & Course</h3>
+                        <div class="intro-info-item">UX: The Beginner's Guide - 2016</div>
+                        <div class="intro-info-item">ASPT .NET #C Intermediate - 2018</div>
+                    </div>
+                    <div class="intro-info-card">
+                        <h3>Activities</h3>
+                        <div class="intro-info-item">Yayasan Buddha Tzu Chi Indonesia - Volunteer</div>
+                        <div class="intro-info-item">Ekayana Peduli - Volunteer</div>
+                        <div class="intro-info-item">AIESEC - Manager GDIP Exchange Program</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- New Education & Certifications Section -->
-        <section class="education-cards-section" style="padding: 4rem 0; margin-bottom: 8rem;">
+        <section class="education-cards-section" style="display: none; padding: 4rem 0; margin-bottom: 8rem;">
             <!-- Section Header (Mockup Style) -->
             <div class="edu-section-header">
                 <div class="edu-header-left">
@@ -1975,13 +2335,13 @@
             <div class="edu-cards-grid" id="edu-cards-grid-container">
                 
                 <!-- Card 1: Pendidikan -->
-                <div class="edu-vertical-card" style="background-image: url('educaa_portrait.png');" 
+                <div class="edu-vertical-card" style="background-image: url('assets/educaa_portrait.png');" 
                      data-category="Pendidikan"
                      data-title="Sarjana Ekonomi (S.E) & Sarjana Komputer (S.Kom)"
                      data-institution="Bina Nusantara University, Jakarta"
                      data-date="Graduated 2018"
                      data-status="Gelar Ganda (Dual Degree)"
-                     data-image="educaa_portrait.png"
+                     data-image="assets/educaa_portrait.png"
                      data-thumbs="educaa_mockup.png,card_img.png,tennis_hero_bg.png"
                      data-details-key="res_edu_details_1"
                      data-highlight-value="GPA 3.82"
@@ -2006,13 +2366,13 @@
                 </div>
 
                 <!-- Card 2: Sertifikasi -->
-                <div class="edu-vertical-card" style="background-image: url('champ_small_1780765834180.png');" 
+                <div class="edu-vertical-card" style="background-image: url('assets/champ_small_1780765834180.png');" 
                      data-category="Sertifikasi"
                      data-title="UX: Panduan Pemula & ASP.NET C# Menengah"
                      data-institution="Interaction Design Foundation & Binus Center"
                      data-date="Released 2016 & 2018"
                      data-status="Sertifikat Terverifikasi"
-                     data-image="champ_small_1780765834180.png"
+                     data-image="assets/champ_small_1780765834180.png"
                      data-thumbs="hero_mockup_screens.png,tooltip_img.png,prev_screen_1780767147349.png"
                      data-details-key="res_edu_details_2"
                      data-highlight-value="Verified"
@@ -2037,13 +2397,13 @@
                 </div>
 
                 <!-- Card 3: Pelatihan -->
-                <div class="edu-vertical-card" style="background-image: url('tennis_hero_bg.png');" 
+                <div class="edu-vertical-card" style="background-image: url('assets/tennis_hero_bg.png');" 
                      data-category="Pelatihan"
                      data-title="Ristek Sistech UI & Webhozz Jakarta"
                      data-institution="Advanced Software Training"
                      data-date="Active Studies (2020 - 2025)"
                      data-status="Studi & Pelatihan Aktif"
-                     data-image="tennis_hero_bg.png"
+                     data-image="assets/tennis_hero_bg.png"
                      data-thumbs="champ_large_1780765815192.png,hero_bg.png,educaa_portrait.png"
                      data-details-key="res_edu_details_3"
                      data-highlight-value="Trainer"
@@ -2068,13 +2428,13 @@
                 </div>
 
                 <!-- Card 4: Organisasi -->
-                <div class="edu-vertical-card" style="background-image: url('prev_bg_hand_1780767130317.png');" 
+                <div class="edu-vertical-card" style="background-image: url('assets/prev_bg_hand_1780767130317.png');" 
                      data-category="Organisasi"
                      data-title="Tzu Chi, Ekayana, AIESEC & Tharpa Ling"
                      data-institution="Yayasan Kemanusiaan & Program Pertukaran GDIP"
                      data-date="Social Projects & Programs"
                      data-status="Kepemimpinan Komunitas"
-                     data-image="prev_bg_hand_1780767130317.png"
+                     data-image="assets/prev_bg_hand_1780767130317.png"
                      data-thumbs="prev_screen_1780767147349.png,tooltip_img.png,card_img.png"
                      data-details-key="res_edu_details_4"
                      data-highlight-value="Active"
@@ -2125,7 +2485,7 @@
                     <div class="modal-header-section">
                         <h2 class="modal-header-title" id="modal-title">Healthcare Website UI UX Design</h2>
                         <div class="modal-creator-badge">
-                            <img src="champ_small_1780765834180.png" class="creator-avatar" alt="Avatar">
+                            <img src="assets/champ_small_1780765834180.png" class="creator-avatar" alt="Avatar">
                             <div class="creator-info">
                                 <span class="creator-name">W. Designer & Developer <span class="creator-badge-pro">PRO</span></span>
                             </div>
@@ -2192,7 +2552,7 @@
 
                             <!-- Creator Profile Card -->
                             <div class="modal-creator-profile-card">
-                                <img src="champ_small_1780765834180.png" class="creator-profile-avatar" alt="Profile">
+                                <img src="assets/champ_small_1780765834180.png" class="creator-profile-avatar" alt="Profile">
                                 <div class="creator-profile-details">
                                     <div class="creator-profile-name-row">
                                         <span class="creator-profile-name">W. Designer & Developer</span>
@@ -2492,30 +2852,7 @@
                 
                 <!-- Left: Huge Text and Description -->
                 <div>
-                    <!-- Background Tags Cluster (Overlapped by Title) -->
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.1rem; opacity: 0.15; margin-bottom: -1rem; pointer-events: none;">
-                        <span class="skill-tag dark">SQL Server | Mongo DB</span>
-                        <span class="skill-tag dark">Webflow</span>
-                        <span class="skill-tag dark">Digital Marketing</span>
-                        <span class="skill-tag dark">User Experience Design</span>
-                        <span class="skill-tag dark">Shopify</span>
-                        <span class="skill-tag dark">User Research</span>
-                        <span class="skill-tag dark">Prototyping</span>
-                        <span class="skill-tag dark">Wordpress / Wix</span>
-                        <span class="skill-tag dark">UML</span>
-                        <span class="skill-tag dark">Vue.js</span>
-                        <span class="skill-tag dark">react .js</span>
-                        <span class="skill-tag dark">photography</span>
-                        <span class="skill-tag dark">ASP C# .Net</span>
-                        <span class="skill-tag dark">PHP Laravel</span>
-                        <span class="skill-tag dark">Social Media</span>
-                        <span class="skill-tag dark">Branding</span>
-                        <span class="skill-tag dark">R Programming</span>
-                        <span class="skill-tag dark">VB .net</span>
-                        <span class="skill-tag dark">SEO</span>
-                        <span class="skill-tag dark">User Interface Design</span>
-                        <span class="skill-tag dark">Power BI</span>
-                    </div>
+
 
                     <div style="position: relative; margin-top: -3.5rem;">
                         <span style="font-family: monospace; font-size: 0.8rem; font-weight: 800; color: rgba(255,255,255,0.4); display: block; margin-bottom: 0.5rem;">02</span>
@@ -2598,29 +2935,16 @@
                     </div>
 
                     <!-- Work Collaboration styled header -->
-                    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
-                        <h2 class="huge-title" style="font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 0.85; margin: 0 0 2rem 0; color: #ffffff; letter-spacing: -2px; text-transform: uppercase;">
-                            WORK COLLABORATION <span style="font-size: 0.9rem; font-family: monospace; color: rgba(255,255,255,0.3); vertical-align: super;">/02</span>
-                        </h2>
-                        
-                        <!-- Tool outline badges -->
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                            <span class="tool-tag-outline">Adobe Illustrator</span>
-                            <span class="tool-tag-outline">Photoshop</span>
-                            <span class="tool-tag-outline">Adobe XD</span>
-                            <span class="tool-tag-outline">VS Code</span>
-                            <span class="tool-tag-outline">Figma</span>
-                            <span class="tool-tag-outline">HTML</span>
-                            <span class="tool-tag-outline">CSS</span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
         <section class="experience-section">
-            <h3 class="section-title" data-i18n="res_exp">Experience</h3>
+            <h2 class="huge-title" style="font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 0.85; margin: 0 0 2rem 0; color: #ffffff; letter-spacing: -2px; text-transform: uppercase;">
+                            WORK COLLABORATION <span style="font-size: 0.9rem; font-family: monospace; color: rgba(255,255,255,0.3); vertical-align: super;">/02</span>
+                        </h2>
             <div class="experience-wrapper">
                 <!-- Navigation Buttons -->
                 <button class="story-nav-btn prev" aria-label="Scroll left">
@@ -2634,7 +2958,7 @@
                     <div class="swiper-wrapper experience-grid">
                         <!-- Card 1: AXA -->
                         <div class="swiper-slide card exp-card story-card">
-                            <div class="story-bg" style="background-image: url('immersive_mockup.png');"></div>
+                            <div class="story-bg" style="background-image: url('assets/immersive_mockup.png');"></div>
                             <div class="story-overlay"></div>
                             <div class="story-logo-placeholder">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
@@ -2661,7 +2985,7 @@
 
                         <!-- Card 2: Smartchain -->
                         <div class="swiper-slide card exp-card story-card">
-                            <div class="story-bg" style="background-image: url('prev_screen_1780767147349.png');"></div>
+                            <div class="story-bg" style="background-image: url('assets/prev_screen_1780767147349.png');"></div>
                             <div class="story-overlay"></div>
                             <div class="story-logo-placeholder">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
@@ -2688,7 +3012,7 @@
 
                         <!-- Card 3: Vivien -->
                         <div class="swiper-slide card exp-card story-card">
-                            <div class="story-bg" style="background-image: url('prev_bg_hand_1780767130317.png');"></div>
+                            <div class="story-bg" style="background-image: url('assets/prev_bg_hand_1780767130317.png');"></div>
                             <div class="story-overlay"></div>
                             <div class="story-logo-placeholder">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
@@ -2715,7 +3039,7 @@
 
                         <!-- Card 4: Esri -->
                         <div class="swiper-slide card exp-card story-card">
-                            <div class="story-bg" style="background-image: url('tennis_hero_bg.png');"></div>
+                            <div class="story-bg" style="background-image: url('assets/tennis_hero_bg.png');"></div>
                             <div class="story-overlay"></div>
                             <div class="story-logo-placeholder">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
@@ -2742,7 +3066,7 @@
 
                         <!-- Card 5: 42 Interactive -->
                         <div class="swiper-slide card exp-card story-card">
-                            <div class="story-bg" style="background-image: url('sports_hero_bg.png');"></div>
+                            <div class="story-bg" style="background-image: url('assets/sports_hero_bg.png');"></div>
                             <div class="story-overlay"></div>
                             <div class="story-logo-placeholder">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
@@ -2769,7 +3093,7 @@
 
                         <!-- Card 6: Jamtangan -->
                         <div class="swiper-slide card exp-card story-card">
-                            <div class="story-bg" style="background-image: url('card_img.png');"></div>
+                            <div class="story-bg" style="background-image: url('assets/card_img.png');"></div>
                             <div class="story-overlay"></div>
                             <div class="story-logo-placeholder">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -2796,7 +3120,7 @@
 
                         <!-- Card 7: Cahaya Jakarta -->
                         <div class="swiper-slide card exp-card story-card">
-                            <div class="story-bg" style="background-image: url('educaa_portrait.png');"></div>
+                            <div class="story-bg" style="background-image: url('assets/educaa_portrait.png');"></div>
                             <div class="story-overlay"></div>
                             <div class="story-logo-placeholder">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -2823,7 +3147,7 @@
 
                         <!-- Card 8: TerraLife -->
                         <div class="swiper-slide card exp-card story-card">
-                            <div class="story-bg" style="background-image: url('educaa_mockup.png');"></div>
+                            <div class="story-bg" style="background-image: url('assets/educaa_mockup.png');"></div>
                             <div class="story-overlay"></div>
                             <div class="story-logo-placeholder">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.58-1 8.58A7 7 0 0 1 11 20z"></path><path d="M9 22a5 5 0 0 1-5-5c0-4 3-6 3-6"></path></svg>
@@ -2853,7 +3177,7 @@
         </section>
         <!-- Past Collaborations Text List -->
         <section class="past-collaborations" style="margin-top: 5rem; padding-top: 5rem; border-top: 1px solid rgba(100,100,100,0.1);">
-            <h2 class="huge-title" data-i18n="res_collab" style="font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 0.85; margin: 0 0 2rem 0; color: #ffffff; letter-spacing: -2px; text-transform: uppercase;">AND OTHERS BACK THEN MY COLLABORATION WITH THESE COMPANY</h2>
+            <h2 class="huge-title" data-i18n="res_collab" style="font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 0.85; margin: 0 0 2rem 0; color: #ffffff; letter-spacing: -2px; text-transform: uppercase;">PAST COLLABORATION</h2>
             
             <div class="collab-year-section" style="display: grid; grid-template-columns: 200px 1fr; gap: 3rem; margin-bottom: 3rem; border-bottom: 1px solid rgba(100,100,100,0.05); padding-bottom: 3rem;">
                 <div class="year-marker" style="font-family: var(--font-heading); font-size: 4rem; font-weight: 800; font-style: italic; color: var(--text-primary);">2021</div>
@@ -2965,11 +3289,70 @@
                     <h3>Front End Engineer</h3>
                     <p>development frontend web portal news website and also mobile version which focusing on microsite and databoks section</p>
                     <div class="prev-screens">
-                        <img src="prev_screen_1780767147349.png" alt="Katadata screenshot" />
-                        <img src="prev_screen_1780767147349.png" alt="Katadata screenshot" />
+                        <img src="assets/prev_screen_1780767147349.png" alt="Katadata screenshot" />
+                        <img src="assets/prev_screen_1780767147349.png" alt="Katadata screenshot" />
                     </div>
                     <div class="btn-pill">Katadata Indonesia</div>
                 </div>
+            </div>
+        </section>
+
+        <section class="blog-section reveal" id="insights">
+            <div class="blog-header">
+                <div class="blog-header-left">
+                    <h2 class="huge-title">INSIGHTS & IDEAS</h2>
+                </div>
+                <div class="blog-header-right">
+                    <span class="blog-arrow">↗</span>
+                    <p class="blog-intro-desc">Thoughts, strategies, and practical insights on design, technology, and digital growth written from real project experience.</p>
+                </div>
+            </div>
+            
+            <div class="blog-grid">
+                <!-- Card 1 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrap">
+                        <img src="assets/blog_desert.png" alt="UX Principles That Convert">
+                    </div>
+                    <div class="blog-card-content">
+                        <h3>UX Principles That Convert</h3>
+                        <div class="blog-meta">
+                            <span class="blog-tag">Design</span>
+                            <span class="blog-dot">•</span>
+                            <span class="blog-date">Apr 19, 2026</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrap">
+                        <img src="assets/blog_corgis.png" alt="Brand Identity Beyond the Logo">
+                    </div>
+                    <div class="blog-card-content">
+                        <h3>Brand Identity Beyond the Logo</h3>
+                        <div class="blog-meta">
+                            <span class="blog-tag">Design</span>
+                            <span class="blog-dot">•</span>
+                            <span class="blog-date">Apr 19, 2026</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrap">
+                        <img src="assets/blog_heatmap.png" alt="Conversion Optimization for Websites">
+                    </div>
+                    <div class="blog-card-content">
+                        <h3>Conversion Optimization for Websites</h3>
+                        <div class="blog-meta">
+                            <span class="blog-tag">Design</span>
+                            <span class="blog-dot">•</span>
+                            <span class="blog-date">Apr 19, 2026</span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -3011,80 +3394,7 @@
 
     </main>
 
-    <footer class="footer-wrapper">
-        <div class="footer-dark">
-            <!-- Top Right Cutout (White) -->
-            <div class="cutout-tr">
-                <!-- Social Icons placed here -->
-                <div class="social-icons">
-                    <a href="#">▶</a>
-                    <a href="#">f</a>
-                    <a href="#">X</a>
-                    <a href="#">ig</a>
-                </div>
-            </div>
-
-            <!-- Bottom Left Cutout (White) -->
-            <div class="cutout-bl">
-                <!-- Copyright placed here -->
-                <div class="copyright-text">
-                    <p data-i18n="footer_copyright">Copyright &copy; 2026 Your Name. All Rights Reserved.</p>
-                </div>
-            </div>
-
-            <div class="footer-content-grid">
-                <!-- Left Side -->
-                <div class="footer-left">
-                    <p class="pre-heading" data-i18n="footer_pre">Interactive designs — accessible anytime, anywhere.</p>
-                    <h1 class="huge-heading" data-i18n="footer_huge">Designing Since 2016</h1>
-                    
-                    <!-- <div class="newsletter">
-                        <p class="ns-title" data-i18n="footer_ns_title">Subscribe newsletter</p>
-                        <p class="ns-desc" data-i18n="footer_ns_desc">Subscribe to our newsletter to get the latest news and updates!</p>
-                        <form class="ns-form">
-                            <span class="ns-icon">✉</span>
-                            <input type="email" placeholder="enter your email">
-                            <button type="button" data-i18n="footer_ns_btn">Subscribe</button>
-                        </form>
-                    </div> -->
-
-                    <div class="footer-logo">
-                        <lottie-player class="thinking-logo" src="cat-loader.json" background="transparent" speed="1" style="width: 44px; height: 44px;" loop autoplay></lottie-player>
-                        <p data-i18n="footer_logo_desc">Master in-demand tech, business, and creative skills</p>
-                    </div>
-                </div>
-
-                <!-- Right Side Links -->
-                <div class="footer-right">
-                    <div class="link-column">
-                        <h4 data-i18n="footer_col1">Quick Links</h4>
-                        <a href="#" data-i18n="footer_col1_1">Our portfolio</a>
-                        <a href="#" data-i18n="footer_col1_2">Our story</a>
-                        <a href="#" data-i18n="footer_col1_3">Our process</a>
-                        <a href="#" data-i18n="footer_col1_4">Testimonials</a>
-                        <a href="#" data-i18n="footer_col1_5">Contact us</a>
-                    </div>
-                    <div class="link-column">
-                        <h4 data-i18n="footer_col2">More</h4>
-                        <a href="#" data-i18n="footer_col2_1">Blogs</a>
-                        <a href="#" data-i18n="footer_col2_2">Jobs</a>
-                    </div>
-                    <div class="link-column">
-                        <h4 data-i18n="footer_col3">Legal & Policy Links</h4>
-                        <a href="#" data-i18n="footer_col3_1">Our rules</a>
-                        <a href="#" data-i18n="footer_col3_2">Our statement</a>
-                        <a href="#" data-i18n="footer_col3_3">Feedback</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom-links">
-                <a href="#" data-i18n="footer_bot_1">Privacy policy</a>
-                <a href="#" data-i18n="footer_bot_2">Terms and conditions</a>
-                <a href="#" data-i18n="footer_bot_3">Copyright</a>
-            </div>
-        </div>
-    </footer>
+    <global-footer></global-footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -3119,8 +3429,9 @@
             });
         });
     </script>
-    <script src="translations.js"></script>
-    <script src="main.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 
