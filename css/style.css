@@ -1110,12 +1110,11 @@ body.light-theme .np-info-btn:hover {
 .netpoint-footer-bar {
     position: relative;
     flex-shrink: 0;
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto 15px auto;
+    width: 100%;
+    margin: 0;
     display: flex;
     justify-content: space-between;
-    padding: 12px 24px;
+    padding: 12px 5%;
     font-size: 0.76rem;
     color: var(--hero-text-desc);
     z-index: 5;
@@ -1123,8 +1122,10 @@ body.light-theme .np-info-btn:hover {
     text-transform: uppercase;
 
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
@@ -1134,7 +1135,9 @@ body.light-theme .np-info-btn:hover {
 
 body.light-theme .netpoint-footer-bar {
     background: rgba(255, 255, 255, 0.35);
-    border: 1px solid rgba(35, 49, 62, 0.12);
+    border: none;
+    border-top: 1px solid rgba(35, 49, 62, 0.12);
+    border-bottom: 1px solid rgba(35, 49, 62, 0.12);
     color: #233129;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
 }
