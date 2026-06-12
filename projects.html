@@ -559,6 +559,437 @@
             background: rgba(0, 0, 0, 0.08);
             border-color: rgba(0, 0, 0, 0.15);
         }
+
+        /* Hide the old project detail section */
+        .proj-detail-section {
+            display: none !important;
+        }
+
+        /* Showcase Hero Section mimicking Mason Home design */
+        .showcase-hero-section {
+            background-image: url('assets/mockuponfield.png');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 80vh;
+            min-height: 600px;
+            font-family: 'Inter', sans-serif;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+            /* CSS variables for ticker theme support */
+            --ticker-bg: rgba(13, 27, 42, 0.55);
+            --ticker-border: rgba(255, 255, 255, 0.15);
+            --ticker-text: #ffffff;
+            --ticker-sep-color: #84b026;
+        }
+
+        body.light-theme .showcase-hero-section {
+            background-image: url('assets/mockuponfield.png');
+            --ticker-bg: rgba(230, 235, 232, 0.8);
+            --ticker-border: #233129;
+            --ticker-text: #233129;
+            --ticker-sep-color: #233129;
+        }
+
+        .showcase-hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 6% 40px 6%;
+            width: 100%;
+            box-sizing: border-box;
+            flex: 1;
+        }
+
+        .showcase-left-col {
+            max-width: 450px;
+            z-index: 5;
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        /* Top magazine branding block */
+        .magazine-brand-wrap {
+            margin-bottom: 55px;
+            font-family: var(--font-heading), sans-serif;
+        }
+
+        .magazine-brand-title {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 0.8;
+            letter-spacing: -2px;
+            color: #ffffff;
+            display: block;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .magazine-brand-sub {
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: #0e3f16;
+            background: #c5f82a;
+            padding: 3px 8px;
+            display: inline-block;
+            margin-top: 5px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        /* Rotated magazine style typography */
+        .magazine-rotated-wrap {
+            transform: rotate(-26deg);
+            transform-origin: left top;
+            margin-top: 50px;
+            margin-left: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .magazine-hero-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+            font-weight: 900;
+            color: #ffffff;
+            text-transform: lowercase;
+            line-height: 0.85;
+            letter-spacing: -3px;
+            margin: 0;
+            transition: color 0.3s;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .magazine-hero-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+            font-weight: 700;
+            line-height: 1.35;
+            color: #ffffff;
+            max-width: 290px;
+            margin: 0;
+            letter-spacing: -0.3px;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        }
+
+        .showcase-read-more {
+            display: inline-block;
+            background: #ffffff;
+            color: #111111;
+            padding: 8px 16px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            width: fit-content;
+            margin-top: 5px;
+            transition: transform 0.2s, background-color 0.2s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .showcase-read-more:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        /* Center Mockup - Phone Frame */
+        .showcase-center-col {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 4;
+            position: relative;
+            margin: 0 40px;
+        }
+
+        .phone-mockup-frame {
+            width: 320px;
+            background: #ffffff;
+            border-radius: 44px;
+            padding: 18px;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.03);
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            transition: transform 0.3s;
+        }
+
+        .phone-mockup-frame:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Brand header inside Phone Mockup */
+        .mockup-brand-header {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #8c7355;
+            margin: 8px 0 16px 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* Screen area inside Mockup */
+        .mockup-screen {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 28px;
+            background: #f4f4f4;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .mockup-screen-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.2s ease-in-out;
+            display: block;
+        }
+
+        /* Product Info Row underneath Screen image */
+        .mockup-product-row {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 4px;
+            box-sizing: border-box;
+        }
+
+        .mockup-product-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #222222;
+        }
+
+        /* Tab Switcher - 01 + controls */
+        .mockup-tab-selector {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            color: #666666;
+        }
+
+        .tab-arrow-btn {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            font-weight: bold;
+            font-size: 0.8rem;
+            transition: background 0.2s, color 0.2s;
+            color: #333333;
+        }
+
+        .tab-arrow-btn:hover {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+        .mockup-current-index {
+            font-weight: 600;
+            min-width: 20px;
+            text-align: center;
+            color: #333333;
+        }
+
+        /* Big Blue Action Button */
+        .mockup-action-btn {
+            width: 100%;
+            background: #2563eb;
+            color: #ffffff;
+            border: none;
+            border-radius: 14px;
+            padding: 14px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
+            box-sizing: border-box;
+        }
+
+        .mockup-action-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .mockup-footer-powered {
+            font-size: 0.65rem;
+            color: #999999;
+            margin: 14px 0 4px 0;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        /* Right Column with Doodle */
+        .showcase-right-col {
+            position: absolute;
+            right: 4%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            pointer-events: none;
+            opacity: 0.75;
+            z-index: 1;
+        }
+
+        .doodle-sketch {
+            max-height: 85%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        /* Floating Decorations */
+        .floating-decor, .decor-cup, .decor-lamp, .showcase-right-col {
+            display: none !important;
+        }
+
+        .decor-cup {
+            left: 26%;
+            top: 36%;
+            width: 50px;
+            height: 60px;
+            background: linear-gradient(135deg, #e4eca9, #b1bd7e);
+            border-radius: 10px 10px 22px 22px;
+            transform: rotate(-15deg);
+            box-shadow: 10px 15px 25px rgba(0,0,0,0.12);
+            position: absolute;
+            animation: float-cup 6s ease-in-out infinite;
+        }
+
+        .decor-cup::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 10px;
+            width: 15px;
+            height: 25px;
+            border: 5px solid #b1bd7e;
+            border-radius: 50%;
+            transform: rotate(15deg);
+        }
+
+        .decor-lamp {
+            left: 48%;
+            top: 25%;
+            width: 140px;
+            opacity: 0.7;
+            animation: float-lamp 8s ease-in-out infinite;
+        }
+
+        @keyframes float-cup {
+            0%, 100% { transform: translateY(0) rotate(-15deg); }
+            50% { transform: translateY(-15px) rotate(-10deg); }
+        }
+
+        @keyframes float-lamp {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-10px) rotate(3deg); }
+        }
+
+        /* Responsive Showcases */
+        @media (max-width: 1024px) {
+            .showcase-hero-section {
+                flex-direction: column;
+                padding: 60px 6%;
+                gap: 50px;
+                text-align: center;
+            }
+            
+            .showcase-left-col {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .showcase-center-col {
+                margin: 0;
+            }
+            
+            .showcase-right-col {
+                display: none;
+            }
+            
+            .decor-cup, .decor-lamp {
+                display: none;
+            }
+
+            .showcase-stats-col {
+                align-items: center;
+                text-align: center;
+                margin-top: 40px;
+            }
+        }
+
+        /* Stats column on the right side of showcase hero */
+        .showcase-stats-col {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            z-index: 5;
+            position: relative;
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        .showcase-stat-item {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .showcase-stat-number {
+            font-size: clamp(3.8rem, 9vw, 6rem);
+            font-weight: 900;
+            line-height: 0.8;
+            color: #ffffff;
+            letter-spacing: -3px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.35);
+        }
+
+        .showcase-stat-label {
+            font-size: clamp(0.85rem, 1.8vw, 1.15rem);
+            font-weight: 800;
+            color: #c5f82a; /* tennis yellow */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 <body class="projects-body">
@@ -568,58 +999,82 @@
 
     <!-- Main Section -->
     <main>
-        <section class="proj-detail-section">
-            <!-- Left Info Panel -->
-            <div class="proj-info-sidebar">
-                <a href="resume.html" class="breadcrumb-back">
-                    ← GALLERY / DINDA HWAN
-                </a>
-                
-                <div class="profile-pill">
-                    <img src="assets/dinda.png" alt="Dinda Hwan" class="profile-pill-avatar" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&auto=format&fit=crop&q=80'">
-                    <span class="profile-pill-name">Dinda Hwan</span>
+        <!-- Showcase Hero Section mimicking Mason Home design -->
+        <section class="showcase-hero-section">
+            <!-- Floating Cup decoration -->
+            <div class="decor-cup floating-decor"></div>
+            
+            <!-- SVG Floor Lamp decoration -->
+            <svg class="decor-lamp floating-decor" viewBox="0 0 100 150" fill="none" stroke="#a38a6a" stroke-width="1.5">
+                <path d="M10,140 L30,140 M20,140 L20,100 C20,40 80,40 80,80 L80,90" />
+                <path d="M70,90 L90,90 L85,105 L75,105 Z" fill="#fef08a" stroke="#a38a6a" />
+                <path d="M72,110 L68,125 M80,110 L80,128 M88,110 L92,125" stroke="#fbbf24" stroke-dasharray="2 2" />
+            </svg>
+
+            <div class="showcase-hero-content">
+                <!-- Left Info Panel - Magazine Cover Style -->
+                <div class="showcase-left-col">
+                    <div class="magazine-brand-wrap">
+                        <span class="magazine-brand-title">Dinda Hwan</span>
+                        <span class="magazine-brand-sub">The portfolio starts here</span>
+                    </div>
+                    
+                    <div class="magazine-rotated-wrap">
+                        <h1 class="magazine-hero-title" id="showcase-project-title">no sweat</h1>
+                        <p class="magazine-hero-desc" id="showcase-project-desc">
+                            Andy Murray on why he'll be back to his best in 2015
+                        </p>
+                        <a href="#" class="showcase-read-more" id="showcase-read-more-btn">READ MORE ›</a>
+                    </div>
                 </div>
 
-                <h1 class="proj-main-title">Dinda Hwan</h1>
-                
-                <p class="proj-description-para">
-                    Multidisciplinary designer & developer bridging elegant digital experience and robust technical code through visual software systems. Creative generalist with nearly a decade of experience.
-                </p>
-
-                <a href="https://hellohwan.github.io" target="_blank" class="proj-main-link">
-                    hellohwan.github.io
-                </a>
-
-                <a href="resume.html" class="sidebar-footer-link">
-                    Explore my complete resume →
-                </a>
+                <!-- Right Stats Panel -->
+                <div class="showcase-stats-col">
+                    <div class="showcase-stat-item">
+                        <span class="showcase-stat-number">8+</span>
+                        <span class="showcase-stat-label">Years Experience</span>
+                    </div>
+                    <div class="showcase-stat-item">
+                        <span class="showcase-stat-number">25+</span>
+                        <span class="showcase-stat-label">Happy Clients</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Right Visual Panel -->
-            <div class="proj-visual-showcase">
-                <h3 class="proj-quote-heading">
-                    Dinda Hwan is a multidisciplinary designer and programmer bridging digital experience and code through visual systems.
-                </h3>
-                
-                <div class="mockups-showcase-grid">
-                    <!-- Stat panel mimicking 87% Reference card -->
-                    <div class="mockup-item-panel grid-stats-box">
-                        <span class="grid-stats-number">98%</span>
-                        <span class="grid-stats-label">Client Satisfaction</span>
-                    </div>
-                    
-                    <div class="mockup-item-panel">
-                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400&auto=format&fit=crop&q=80" alt="UI Screenshot" class="mockup-panel-img">
-                    </div>
-                    
-                    <div class="mockup-item-panel">
-                        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&auto=format&fit=crop&q=80" alt="Photography Landscape" class="mockup-panel-img">
-                    </div>
+            <div class="netpoint-footer-bar">
+                <span>BASED IN JAKARTA, INDONESIA</span>
+                <span id="hero-user-info">LOCAL TIME: 00:00</span>
+            </div>
 
-                    <!-- Laptop + Phone Banner mimicking Onza layout -->
-                    <div class="mockup-item-panel grid-span-all">
-                        <img src="assets/resume_hero_bg.jpg" alt="Mockups banner" class="mockup-panel-img" style="aspect-ratio: auto; height: 100%;">
-                    </div>
+            <!-- Scrolling Ticker -->
+            <div class="home-ticker-wrap">
+                <div class="home-ticker">
+                    <div class="home-ticker-item">UI/UX Design</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
+                    <div class="home-ticker-item">Web Development</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
+                    <div class="home-ticker-item">Branding</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
+                    <div class="home-ticker-item">System Architecture</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
+                    <div class="home-ticker-item">Prototyping</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
+                    <div class="home-ticker-item">User Research</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
+                </div>
+                <div class="home-ticker" aria-hidden="true">
+                    <div class="home-ticker-item">UI/UX Design</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
+                    <div class="home-ticker-item">Web Development</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
+                    <div class="home-ticker-item">Branding</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
+                    <div class="home-ticker-item">System Architecture</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
+                    <div class="home-ticker-item">Prototyping</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
+                    <div class="home-ticker-item">User Research</div>
+                    <div class="home-ticker-sep">&gt;&lt;</div>
                 </div>
             </div>
         </section>
@@ -735,5 +1190,112 @@
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const projectsData = [
+                {
+                    index: "01",
+                    brand: "MASON",
+                    name: "Bouclé Pouffe",
+                    tag: "no sweat",
+                    desc: "Dinda Hwan on why student platforms should be back to their best in 2026",
+                    image: "assets/educaa_mockup.png",
+                    link: "experience-detail.html?id=axa-mandiri",
+                    btnText: "Buy Now",
+                    footerText: "Powered by Razorpay"
+                },
+                {
+                    index: "02",
+                    brand: "IMMERSIVE",
+                    name: "Virtual Hub",
+                    tag: "go deep",
+                    desc: "Exploring how immersive design breaks user barriers with WebGL",
+                    image: "assets/immersive_mockup.png",
+                    link: "experience-detail.html?id=chubb-life",
+                    btnText: "Explore VR",
+                    footerText: "Powered by WebGL"
+                },
+                {
+                    index: "03",
+                    brand: "KATADATA",
+                    name: "Insights Panel",
+                    tag: "big data",
+                    desc: "Inside the high-throughput dashboard tracking 100M+ real-time facts",
+                    image: "assets/prev_screen_1780767147349.png",
+                    link: "experience-detail.html?id=xl-axiata",
+                    btnText: "View Insights",
+                    footerText: "Powered by D3.js"
+                },
+                {
+                    index: "04",
+                    brand: "CHAMP",
+                    name: "Tennis Arena",
+                    tag: "ace play",
+                    desc: "Designing the tournament system connecting professional leagues globally",
+                    image: "assets/champ_large_1780765815192.png",
+                    link: "experience-detail.html?id=great-giant-pineapple",
+                    btnText: "Book Court",
+                    footerText: "Powered by CourtSync"
+                }
+            ];
+
+            let currentIndex = 0;
+
+            const brandHeader = document.getElementById("mockup-brand-header");
+            const screenImg = document.getElementById("mockup-screen-img");
+            const productName = document.getElementById("mockup-product-name");
+            const indexDisplay = document.getElementById("mockup-current-index");
+            const actionBtn = document.getElementById("mockup-action-btn");
+            const footerText = document.getElementById("mockup-footer-powered");
+            
+            const projectTitle = document.getElementById("showcase-project-title");
+            const projectDesc = document.getElementById("showcase-project-desc");
+            const readMoreBtn = document.getElementById("showcase-read-more-btn");
+
+            const updateShowcase = (index) => {
+                const data = projectsData[index];
+                
+                if (screenImg) screenImg.style.opacity = "0";
+                
+                setTimeout(() => {
+                    if (brandHeader) brandHeader.textContent = data.brand;
+                    if (screenImg) screenImg.src = data.image;
+                    if (productName) productName.textContent = data.name;
+                    if (indexDisplay) indexDisplay.textContent = data.index;
+                    if (actionBtn) {
+                        actionBtn.textContent = data.btnText;
+                        actionBtn.href = data.link;
+                    }
+                    if (footerText) footerText.textContent = data.footerText;
+                    
+                    if (projectTitle) projectTitle.textContent = data.tag;
+                    if (projectDesc) projectDesc.textContent = data.desc;
+                    if (readMoreBtn) readMoreBtn.href = data.link;
+                    
+                    if (screenImg) screenImg.style.opacity = "1";
+                }, 150);
+            };
+
+            const prevBtn = document.getElementById("prev-tab-btn");
+            if (prevBtn) {
+                prevBtn.addEventListener("click", () => {
+                    currentIndex = (currentIndex - 1 + projectsData.length) % projectsData.length;
+                    updateShowcase(currentIndex);
+                });
+            }
+
+            const nextBtn = document.getElementById("next-tab-btn");
+            if (nextBtn) {
+                nextBtn.addEventListener("click", () => {
+                    currentIndex = (currentIndex + 1) % projectsData.length;
+                    updateShowcase(currentIndex);
+                });
+            }
+
+            // Initial load
+            updateShowcase(currentIndex);
+        });
+    </script>
 </body>
 </html>
