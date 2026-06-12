@@ -3,6 +3,8 @@ class GlobalNavbar extends HTMLElement {
         const page = this.getAttribute('page') || 'home';
         const isResume = page === 'resume';
         const isDetail = page === 'detail';
+        const isProjects = page === 'projects';
+        const needsHomePrefix = isResume || isDetail || isProjects;
         const childrenHTML = this.innerHTML; // Preserves inner HTML like sub-nav-bar for detail page
 
         let themeToggleHTML = '';
@@ -42,11 +44,11 @@ class GlobalNavbar extends HTMLElement {
             `;
         }
 
-        const projectHref = (isResume || isDetail) ? 'index.html#work' : '#work';
-        const karyaHref = (isResume || isDetail) ? 'index.html#work' : '#work';
-        const tulisanHref = (isResume || isDetail) ? 'index.html#' : '#';
-        const contactHref = (isResume || isDetail) ? 'index.html#contact' : '#contact';
-        const contactClass = isResume ? 'btn-black' : 'btn-primary btn-nav';
+        const projectHref = 'projects.html';
+        const karyaHref = needsHomePrefix ? 'index.html#work' : '#work';
+        const tulisanHref = needsHomePrefix ? 'index.html#' : '#';
+        const contactHref = needsHomePrefix ? 'index.html#contact' : '#contact';
+        const contactClass = (isResume || isProjects) ? 'btn-black' : 'btn-primary btn-nav';
 
         this.innerHTML = `
             <header class="${isDetail ? 'docs-header' : 'header-wrapper'}">
