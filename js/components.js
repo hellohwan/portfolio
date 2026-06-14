@@ -240,3 +240,49 @@ class GlobalFooter extends HTMLElement {
 
 customElements.define('global-navbar', GlobalNavbar);
 customElements.define('global-footer', GlobalFooter);
+
+class FloatingContact extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <div class="floating-contact-btn">
+                <div class="floating-text-group">
+                    <h4 class="floating-title">Speak to me</h4>
+                    <p class="floating-subtitle">Email or book a call</p>
+                </div>
+                <div class="floating-icons">
+                    <a href="mailto:hello@example.com" class="floating-icon-btn floating-email" aria-label="Email me">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#" class="floating-icon-btn floating-calendar" aria-label="Book a call">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        `;
+
+        const btn = this.querySelector('.floating-contact-btn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        }, { passive: true });
+    }
+}
+customElements.define('floating-contact', FloatingContact);
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (!document.querySelector('floating-contact')) {
+        const fc = document.createElement('floating-contact');
+        document.body.appendChild(fc);
+    }
+});

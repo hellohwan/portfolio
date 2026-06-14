@@ -5139,3 +5139,110 @@ details[open] .sch-acc-icon {
         font-size: 1.5rem;
     }
 }
+
+/* Floating Contact Button */
+.floating-contact-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    padding: 8px 10px 8px 24px;
+    gap: 20px;
+    z-index: 999;
+    border: 1px solid #eaeaea;
+    pointer-events: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.floating-contact-btn.visible {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.light-theme .floating-contact-btn {
+    background: #ffffff;
+    border-color: #eaeaea;
+}
+body:not(.light-theme) .floating-contact-btn {
+    background: #111111;
+    border-color: #333333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.floating-text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+    line-height: 1.2;
+}
+
+body:not(.light-theme) .floating-title {
+    color: #ffffff;
+}
+
+.floating-subtitle {
+    font-size: 12px;
+    color: #777777;
+    margin: 0;
+    font-weight: 500;
+}
+
+.floating-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.floating-icon-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.floating-icon-btn:hover {
+    transform: scale(1.05);
+}
+
+.floating-email {
+    background: #000000;
+    color: #ffffff;
+    box-shadow: inset 0 2px 4px rgba(255,255,255,0.2), 0 4px 10px rgba(0,0,0,0.2);
+}
+
+body:not(.light-theme) .floating-email {
+    background: #ffffff;
+    color: #000000;
+}
+
+.floating-calendar {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+body:not(.light-theme) .floating-calendar {
+    background: #222222;
+    border-color: #444;
+    color: #ffffff;
+}
