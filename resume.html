@@ -1007,14 +1007,15 @@
                     box-sizing: border-box;
                 }
                 .sticker-main-title {
-                    font-family: var(--font-heading);
-                    font-weight: 900;
-                    font-size: clamp(3.5rem, 8.5vw, 6.8rem);
-                    color: #009e49; /* Bold solid green */
+                    font-family: 'VT323', monospace;
+                    font-weight: 400; /* VT323 usually only has 400 */
+                    font-size: clamp(4rem, 10vw, 7.5rem);
+                    color: #ffffff; /* Make it white based on the image */
                     line-height: 0.82;
-                    text-transform: none;
-                    letter-spacing: -4px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px; /* Pixel fonts need a bit of spacing */
                     margin: 0;
+                    text-shadow: 2px 2px 0px rgba(0,0,0,0.2); /* optional slight shadow for blockiness */
                 }
                 .sticker-smiley {
                     position: absolute;
