@@ -1773,169 +1773,6 @@
         </div>
 
         <!-- New Intro Section (Added before Background) -->
-        <section class="intro-hybrid-section" style="display: none;">
-            <style>
-                .intro-hybrid-section {
-                    background-color: #0a0a0a;
-                    padding-top: 6rem;
-                    display: flex;
-                    flex-direction: column;
-                }
-                .intro-hybrid-top {
-                    padding: 0 5%;
-                    max-width: 1400px;
-                    margin: 0 auto 4rem auto;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    gap: 4rem;
-                }
-                .intro-hybrid-left {
-                    flex: 1.2;
-                }
-                .intro-hybrid-num {
-                    font-family: var(--font-heading);
-                    font-size: 0.9rem;
-                    font-weight: 800;
-                    margin-bottom: 1.5rem;
-                    display: block;
-                    color: #fff;
-                }
-                .intro-hybrid-title {
-                    font-family: var(--font-heading);
-                    font-size: clamp(2rem, 4.5vw, 4rem);
-                    font-weight: 900;
-                    line-height: 1.05;
-                    color: #fff;
-                    margin: 0;
-                    text-transform: uppercase;
-                    letter-spacing: -1px;
-                }
-                .intro-hybrid-right {
-                    flex: 1;
-                    padding-top: 4.5rem;
-                }
-                .intro-hybrid-desc {
-                    font-family: var(--font-body);
-                    font-size: 1.05rem;
-                    line-height: 1.8;
-                    color: #e5e5e5;
-                    font-weight: 600;
-                    margin-bottom: 1.5rem;
-                }
-                .intro-hybrid-bottom {
-                    background-color: #171717;
-                    padding: 4rem 5%;
-                }
-                .intro-hybrid-bottom-inner {
-                    max-width: 1400px;
-                    margin: 0 auto;
-                    display: grid;
-                    grid-template-columns: repeat(4, 1fr);
-                    gap: 1.2rem;
-                }
-                .intro-info-card {
-                    background-color: #f3efe6;
-                    border-radius: 8px;
-                    padding: 2rem 1.5rem;
-                    color: #111;
-                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                    transition: transform 0.3s ease;
-                }
-                .intro-info-card:hover {
-                    transform: translateY(-5px);
-                }
-                .intro-info-card h3 {
-                    font-family: var(--font-heading);
-                    font-size: 1.4rem;
-                    font-weight: 800;
-                    margin-bottom: 1.5rem;
-                    color: #111;
-                }
-                .intro-info-item {
-                    font-family: var(--font-body);
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    line-height: 1.5;
-                    margin-bottom: 1.2rem;
-                    color: #222;
-                }
-                .intro-info-item:last-child {
-                    margin-bottom: 0;
-                }
-                body.light-theme .intro-hybrid-section {
-                    background-color: #ffffff;
-                }
-                body.light-theme .intro-hybrid-num,
-                body.light-theme .intro-hybrid-title {
-                    color: #111;
-                }
-                body.light-theme .intro-hybrid-desc {
-                    color: #444;
-                }
-                body.light-theme .intro-hybrid-bottom {
-                    background-color: #f9f9f9;
-                }
-                @media (max-width: 1024px) {
-                    .intro-hybrid-top {
-                        flex-direction: column;
-                        gap: 2rem;
-                    }
-                    .intro-hybrid-bottom-inner {
-                        grid-template-columns: repeat(2, 1fr);
-                        gap: 1.5rem;
-                    }
-                    .intro-hybrid-right {
-                        padding-top: 0;
-                    }
-                }
-                @media (max-width: 600px) {
-                    .intro-hybrid-bottom-inner {
-                        grid-template-columns: 1fr;
-                    }
-                }
-            </style>
-
-            <div class="intro-hybrid-top">
-                <div class="intro-hybrid-left">
-                    <span class="intro-hybrid-num">01</span>
-                    <h2 class="intro-hybrid-title">SOLVING<br>PROBLEMS<br>THROUGH ARTFUL<br>SYSTEMS AND<br>INTERFACES.</h2>
-                </div>
-                <div class="intro-hybrid-right">
-                    <p class="intro-hybrid-desc">Hello, I am a designer who codes - a hybrid creative with nearly a decade of crafting elegant, meaningful digital experiences.</p>
-                    <p class="intro-hybrid-desc">Whether it is sculpting intuitive interfaces or engineering fluid systems, I bring ideas into pixels and transform complex journeys into products that feel seamless.</p>
-                    <p class="intro-hybrid-desc">I work where business strategy, marketing psychology, and UX/UI design converge, with a focus on experiences that users enjoy and products that thrive.</p>
-                </div>
-            </div>
-
-            <div class="intro-hybrid-bottom">
-                <div class="intro-hybrid-bottom-inner">
-                    <div class="intro-info-card">
-                        <h3>Contact</h3>
-                        <div class="intro-info-item">Whatsapp: 08777 6660 258</div>
-                        <div class="intro-info-item">Email: hellohwan26@outlook.com</div>
-                        <div class="intro-info-item">LinkedIn: Dinda Pratika</div>
-                    </div>
-                    <div class="intro-info-card">
-                        <h3>Education</h3>
-                        <div class="intro-info-item">Binus Nusantara, Jakarta</div>
-                        <div class="intro-info-item">Bachelor of Accounting (S.E)</div>
-                        <div class="intro-info-item">Bachelor of Information System (S.Kom)</div>
-                    </div>
-                    <div class="intro-info-card">
-                        <h3>Certification & Course</h3>
-                        <div class="intro-info-item">UX: The Beginner's Guide - 2016</div>
-                        <div class="intro-info-item">ASPT .NET #C Intermediate - 2018</div>
-                    </div>
-                    <div class="intro-info-card">
-                        <h3>Activities</h3>
-                        <div class="intro-info-item">Yayasan Buddha Tzu Chi Indonesia - Volunteer</div>
-                        <div class="intro-info-item">Ekayana Peduli - Volunteer</div>
-                        <div class="intro-info-item">AIESEC - Manager GDIP Exchange Program</div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
     <main class="resume-main">
             <style>
@@ -1945,47 +1782,110 @@
                     display: flex;
                     flex-direction: column;
                 }
-                .intro-hybrid-top {
+                .intro-hybrid-header {
                     padding: 0 5%;
                     max-width: 1400px;
                     margin: 0 auto 4rem auto;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    gap: 4rem;
                 }
-                .intro-hybrid-left {
-                    flex: 1.2;
-                }
-                .intro-hybrid-num {
-                    font-family: var(--font-heading);
-                    font-size: 0.9rem;
-                    font-weight: 800;
-                    margin-bottom: 1.5rem;
-                    display: block;
-                    color: #fff;
-                }
-                .intro-hybrid-title {
-                    font-family: var(--font-heading);
-                    font-size: clamp(2rem, 4.5vw, 4rem);
+                .intro-huge-title {
+                    font-size: clamp(3rem, 7vw, 3.5rem);
                     font-weight: 900;
                     line-height: 1.05;
-                    color: #fff;
+                    letter-spacing: -0.04em;
                     margin: 0;
-                    text-transform: uppercase;
-                    letter-spacing: -1px;
+                    font-family: var(--font-heading);
+                }
+                .intro-text-gray {
+                    color: #b0b0b0;
+                }
+                .intro-text-black {
+                    color: #ffffff;
+                }
+                .intro-hybrid-top.new-layout {
+                    padding: 0 5%;
+                    max-width: 1400px;
+                    margin: 0 auto 4rem auto;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 6rem;
+                    align-items: start;
+                }
+                .intro-hybrid-left {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                }
+                .intro-profile-img-wrapper {
+                    position: relative;
+                    width: 100%;
+                }
+                .intro-profile-img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    display: block;
+                }
+                .intro-social-pills {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    display: flex;
+                    gap: 10px;
+                }
+                .intro-social-pill {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: rgba(0,0,0,0.6);
+                    backdrop-filter: blur(5px);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    transition: all 0.3s ease;
+                }
+                .intro-social-pill:hover {
+                    background: rgba(0,0,0,0.9);
+                    transform: translateY(-3px);
+                }
+                .intro-profile-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.2rem;
+                }
+                .intro-profile-name {
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                    margin: 0;
+                    color: #fff;
+                    font-family: var(--font-heading);
+                }
+                .intro-profile-role {
+                    font-size: 1rem;
+                    color: #c0c0c0;
+                    margin: 0;
+                    font-weight: 500;
                 }
                 .intro-hybrid-right {
-                    flex: 1;
-                    padding-top: 4.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding-top: 2rem;
                 }
                 .intro-hybrid-desc {
                     font-family: var(--font-body);
-                    font-size: 1.05rem;
-                    line-height: 1.8;
-                    color: #e5e5e5;
-                    font-weight: 600;
-                    margin-bottom: 1.5rem;
+                    font-size: 1.25rem;
+                    line-height: 1.6;
+                    color: #e0e0e0;
+                    font-weight: 400;
+                    margin: 0;
+                }
+                .intro-hybrid-desc strong {
+                    font-weight: 800;
+                    color: #ffffff;
                 }
                 .intro-hybrid-bottom {
                     background-color: #171717;
@@ -2030,20 +1930,24 @@
                 body.light-theme .intro-hybrid-section {
                     background-color: #ffffff;
                 }
-                body.light-theme .intro-hybrid-num,
-                body.light-theme .intro-hybrid-title {
+                body.light-theme .intro-text-black,
+                body.light-theme .intro-profile-name,
+                body.light-theme .intro-hybrid-desc strong {
                     color: #111;
                 }
+                body.light-theme .intro-profile-role {
+                    color: #666;
+                }
                 body.light-theme .intro-hybrid-desc {
-                    color: #444;
+                    color: #555;
                 }
                 body.light-theme .intro-hybrid-bottom {
                     background-color: #f9f9f9;
                 }
                 @media (max-width: 1024px) {
-                    .intro-hybrid-top {
-                        flex-direction: column;
-                        gap: 2rem;
+                    .intro-hybrid-top.new-layout {
+                        grid-template-columns: 1fr;
+                        gap: 3rem;
                     }
                     .intro-hybrid-bottom-inner {
                         grid-template-columns: repeat(2, 1fr);
@@ -2059,16 +1963,35 @@
                     }
                 }
             </style>
+            
+            <section class="intro-hybrid-section">
 
-            <div class="intro-hybrid-top">
+            <div class="intro-hybrid-header">
+                <h1 class="intro-huge-title">
+                    <span class="intro-text-gray">Designing experiences</span><br>
+                    <span class="intro-text-black">that solve real problems.</span>
+                </h1>
+            </div>
+            
+            <div class="intro-hybrid-top new-layout">
                 <div class="intro-hybrid-left">
-                    <span class="intro-hybrid-num">01</span>
-                    <h2 class="intro-hybrid-title">SOLVING<br>PROBLEMS<br>THROUGH ARTFUL<br>SYSTEMS AND<br>INTERFACES.</h2>
+                    <div class="intro-profile-img-wrapper">
+                        <img src="assets/dinda.png" width="768" height="1024" sizes="max((min(100vw, 1080px) - 152px) / 2.5, 1px)" class="intro-profile-img" alt="Profile">
+                        <div class="intro-social-pills">
+                            <a href="#" class="intro-social-pill"><i class="fa-brands fa-dribbble"></i></a>
+                            <a href="#" class="intro-social-pill"><i class="fa-brands fa-behance"></i></a>
+                            <a href="#" class="intro-social-pill"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="intro-profile-info">
+                        <h3 class="intro-profile-name">Dinda Pratika</h3>
+                        <p class="intro-profile-role">A designer who codes</p>
+                    </div>
                 </div>
                 <div class="intro-hybrid-right">
-                    <p class="intro-hybrid-desc">Hello, I am a designer who codes - a hybrid creative with nearly a decade of crafting elegant, meaningful digital experiences.</p>
-                    <p class="intro-hybrid-desc">Whether it is sculpting intuitive interfaces or engineering fluid systems, I bring ideas into pixels and transform complex journeys into products that feel seamless.</p>
-                    <p class="intro-hybrid-desc">I work where business strategy, marketing psychology, and UX/UI design converge, with a focus on experiences that users enjoy and products that thrive.</p>
+                    <p class="intro-hybrid-desc"><strong>Hello, I am a designer who codes</strong> - a hybrid creative with nearly a decade of crafting elegant, meaningful digital experiences.</p>
+                    <p class="intro-hybrid-desc"><strong>Whether it is sculpting intuitive interfaces or engineering fluid systems,</strong> I bring ideas into pixels and transform complex journeys into products that feel seamless.</p>
+                    <p class="intro-hybrid-desc"><strong>I work where business strategy, marketing psychology, and UX/UI design converge,</strong> with a focus on experiences that users enjoy and products that thrive.</p>
                 </div>
             </div>
 
@@ -3893,33 +3816,67 @@
         <section class="others-collabs" style="margin: 8rem 0 5rem; text-align: center;">
             <h2 class="huge-title" style="font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 0.85; margin: 0 0 2rem 0; color: #ffffff; letter-spacing: -2px; text-transform: uppercase;">OTHERS COLLABS <span class="index" style="color: var(--resume-accent); font-size: 1rem; vertical-align: super;">/03</span></h2>
             
-            <div class="collab-logos-row" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4rem 5rem; opacity: 0.8;">
-                <div class="logo-item" style="font-family: 'Playfair Display', serif; font-size: 1.2rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer; display: flex; align-items: center; gap: 10px;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
-                    <span style="font-size: 2rem;">🛡️</span> PRUDENTIAL
-                </div>
-                <div class="logo-item" style="display: flex; align-items: center; gap: 10px; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
-                    <span style="font-size: 2.5rem; font-weight: bold; font-family: serif;">A</span> <span style="font-size: 1.2rem;">astra life</span>
-                </div>
-                <div class="logo-item" style="font-style: italic; font-weight: 800; font-size: 1.5rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
-                    dwidaya<span style="font-size: 0.8rem; font-weight: normal; vertical-align: top;">holidays</span>
-                </div>
-                <div class="logo-item" style="font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.6rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
-                    Hoodieku.
-                </div>
-                <div class="logo-item" style="text-transform: uppercase; font-size: 0.9rem; font-weight: 800; line-height: 1; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
-                    KAMADJAJA<br>LOGISTICS
-                </div>
-                <div class="logo-item" style="font-weight: 800; font-size: 1.4rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
-                    <span style="color: var(--resume-accent);">Klik</span>ACC
-                </div>
-                <div class="logo-item" style="color: #50C8C8; font-weight: bold; font-size: 1.4rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
-                    aldiracita
-                </div>
-                <div class="logo-item" style="font-family: 'Playfair Display', serif; font-size: 1.5rem; letter-spacing: 2px; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
-                    PILIPILI
-                </div>
-                <div class="logo-item" style="font-weight: 800; font-size: 1.6rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
-                    VALE
+            <div class="collab-logos-row" style="width: 100%; overflow: hidden; white-space: nowrap; position: relative; padding: 2rem 0; opacity: 0.8; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+                <div style="display: inline-flex; animation: marquee 35s linear infinite;">
+                    <div style="display: flex; align-items: center; gap: 6rem; padding-right: 6rem;">
+                        <div class="logo-item" style="font-family: 'Playfair Display', serif; font-size: 1.2rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer; display: flex; align-items: center; gap: 10px;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            <span style="font-size: 2rem;">🛡️</span> PRUDENTIAL
+                        </div>
+                        <div class="logo-item" style="display: flex; align-items: center; gap: 10px; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            <span style="font-size: 2.5rem; font-weight: bold; font-family: serif;">A</span> <span style="font-size: 1.2rem;">astra life</span>
+                        </div>
+                        <div class="logo-item" style="font-style: italic; font-weight: 800; font-size: 1.5rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            dwidaya<span style="font-size: 0.8rem; font-weight: normal; vertical-align: top;">holidays</span>
+                        </div>
+                        <div class="logo-item" style="font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.6rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            Hoodieku.
+                        </div>
+                        <div class="logo-item" style="text-transform: uppercase; font-size: 0.9rem; font-weight: 800; line-height: 1; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            KAMADJAJA<br>LOGISTICS
+                        </div>
+                        <div class="logo-item" style="font-weight: 800; font-size: 1.4rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            <span style="color: var(--resume-accent);">Klik</span>ACC
+                        </div>
+                        <div class="logo-item" style="color: #50C8C8; font-weight: bold; font-size: 1.4rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            aldiracita
+                        </div>
+                        <div class="logo-item" style="font-family: 'Playfair Display', serif; font-size: 1.5rem; letter-spacing: 2px; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            PILIPILI
+                        </div>
+                        <div class="logo-item" style="font-weight: 800; font-size: 1.6rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            VALE
+                        </div>
+                    </div>
+                    <!-- Duplicate for infinite marquee -->
+                    <div style="display: flex; align-items: center; gap: 6rem; padding-right: 6rem;" aria-hidden="true">
+                        <div class="logo-item" style="font-family: 'Playfair Display', serif; font-size: 1.2rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer; display: flex; align-items: center; gap: 10px;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            <span style="font-size: 2rem;">🛡️</span> PRUDENTIAL
+                        </div>
+                        <div class="logo-item" style="display: flex; align-items: center; gap: 10px; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            <span style="font-size: 2.5rem; font-weight: bold; font-family: serif;">A</span> <span style="font-size: 1.2rem;">astra life</span>
+                        </div>
+                        <div class="logo-item" style="font-style: italic; font-weight: 800; font-size: 1.5rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            dwidaya<span style="font-size: 0.8rem; font-weight: normal; vertical-align: top;">holidays</span>
+                        </div>
+                        <div class="logo-item" style="font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.6rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            Hoodieku.
+                        </div>
+                        <div class="logo-item" style="text-transform: uppercase; font-size: 0.9rem; font-weight: 800; line-height: 1; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            KAMADJAJA<br>LOGISTICS
+                        </div>
+                        <div class="logo-item" style="font-weight: 800; font-size: 1.4rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            <span style="color: var(--resume-accent);">Klik</span>ACC
+                        </div>
+                        <div class="logo-item" style="color: #50C8C8; font-weight: bold; font-size: 1.4rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            aldiracita
+                        </div>
+                        <div class="logo-item" style="font-family: 'Playfair Display', serif; font-size: 1.5rem; letter-spacing: 2px; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            PILIPILI
+                        </div>
+                        <div class="logo-item" style="font-weight: 800; font-size: 1.6rem; filter: grayscale(100%); transition: 0.3s; cursor: pointer;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%)'">
+                            VALE
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

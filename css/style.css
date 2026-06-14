@@ -371,25 +371,45 @@ body:not(.light-theme) .header-wrapper.scrolled .top-banner-marquee {
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Scrolled Navbar Style */
+/* Scrolled Navbar Style (Pill shape) */
 .header-wrapper.scrolled {
-    background: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    background: transparent;
+    box-shadow: none;
+    border-bottom: none;
+    padding-top: 0;
+    pointer-events: none;
 }
 
 body:not(.light-theme) .header-wrapper.scrolled {
-    background: #0a0a0a;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+    background: transparent;
+    border-bottom: none;
+    box-shadow: none;
 }
 
 .header-wrapper.scrolled .navbar.awwwards-nav {
+    pointer-events: auto;
+    background: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 12px 5%;
+    width: max-content;
+    max-width: 95%;
+    margin: 20px auto 0;
+    padding: 10px 16px 10px 24px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+body:not(.light-theme) .header-wrapper.scrolled .navbar.awwwards-nav {
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Removed background from scrolled nav links */
@@ -4858,9 +4878,9 @@ body:not(.light-theme) .sch-badge-num {
 
 .sch-title {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-size: clamp(3rem, 5vw, 2.5rem);
     line-height: 1.05;
-    font-weight: 400;
+    font-weight: bold;
     letter-spacing: -1.5px;
     color: var(--text-primary);
     margin: 0;

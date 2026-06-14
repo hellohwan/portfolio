@@ -15,13 +15,13 @@ class GlobalNavbar extends HTMLElement {
                         <picture style="width: 20px; height: 20px; display: inline-block;">
                             <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f31e/512.webp" type="image/webp">
                             <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f31e/512.gif" alt="🌞" width="20" height="20">
-                        </picture> Light
+                        </picture>
                     </span>
                     <span class="icon-moon" style="display: inline-flex; align-items: center; gap: 4px;">
                         <picture style="width: 20px; height: 20px; display: inline-block;">
                             <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f31b/512.webp" type="image/webp">
                             <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f31b/512.gif" alt="🌛" width="20" height="20">
-                        </picture> Dark
+                        </picture>
                     </span>
                 </button>
             `;

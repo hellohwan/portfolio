@@ -75,6 +75,14 @@ body.light-theme .bg-blue *, body.light-theme .bg-dark-gray * {
     margin: 0 auto;
 }
 
+body.light-theme .resume-main {
+    background-color: #ffffff;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
 /* Editorial Hero (Screenshot Match) */
 .resume-editorial-hero {
     background-color: #929e9a; /* Greenish gray from reference */
