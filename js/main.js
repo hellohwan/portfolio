@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     loader.style.display = 'none';
                     showMoodTracker();
-                }, 600);
+                }, 300);
             } else {
                 showMoodTracker();
             }
@@ -279,8 +279,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', hideLoader);
     document.addEventListener('DOMContentLoaded', hideLoader);
 
-    // Hard fallback — force-hide after 0.8s to ensure fast loading feel no matter what
-    setTimeout(hideLoader, 800);
+    // If DOM is already loaded before this script runs, hide immediately
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+        hideLoader();
+    }
+
+    // Hard fallback — force-hide after 0.5s to ensure fast loading feel no matter what
+    setTimeout(hideLoader, 500);
 
     // Custom Tennis Cursor Logic
     if (window.innerWidth > 768) {
