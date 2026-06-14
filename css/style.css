@@ -3434,11 +3434,26 @@ body.light-theme .editorial-sparkle {
     color: #111;
     font-weight: 700;
 }
-.client-logos {
-    display: flex;
+.client-logos-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    max-width: 60%;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.client-logos-track {
+    display: inline-flex;
     align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    gap: 60px;
+    animation: scrollLogos 20s linear infinite;
+}
+.client-logos-track:hover {
+    animation-play-state: paused;
+}
+@keyframes scrollLogos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 30px)); }
 }
 .client-logo {
     display: flex;
