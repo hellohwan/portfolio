@@ -3409,6 +3409,69 @@ body.light-theme .editorial-sparkle {
     filter: drop-shadow(0 0 4px rgba(196,240,66,0.6));
 }
 
+/* Footer Clients Banner */
+.footer-clients-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 5%;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    margin-bottom: 80px;
+    background: #f9f9f9;
+}
+@media (max-width: 900px) {
+    .footer-clients-banner {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+}
+.client-text {
+    font-size: 1.1rem;
+    color: #666;
+}
+.client-text strong {
+    color: #111;
+    font-weight: 700;
+}
+.client-logos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.client-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #555;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.client-logo:hover {
+    opacity: 1;
+    color: #111;
+}
+body.light-theme .footer-clients-banner {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: #111;
+}
+body.light-theme .client-text {
+    color: #aaa;
+}
+body.light-theme .client-text strong {
+    color: #fff;
+}
+body.light-theme .client-logo {
+    color: #999;
+}
+body.light-theme .client-logo:hover {
+    color: #fff;
+}
+
 /* Modern Social-Themed Footer Styles */
 .modern-footer {
     background: #ffbaba;
