@@ -1495,7 +1495,7 @@ body.light-theme .netpoint-footer-bar {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: #ff7e1d; /* Orange loader */
+    background: #000000; /* Black loader */
     display: flex;
     justify-content: center;
     align-items: center;
