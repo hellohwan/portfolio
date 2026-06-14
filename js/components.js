@@ -68,7 +68,7 @@ class GlobalNavbar extends HTMLElement {
                         <ul class="nav-links-main">
                             <li><a href="index.html" data-i18n="nav_home">Home</a></li>
                             <li><a href="${projectHref}" data-i18n="nav_project">Project</a></li>
-                            <li><a href="${tulisanHref}" data-i18n="nav_tulisan">Tulisan Saya</a></li>
+                            <li><a href="${tulisanHref}" data-i18n="nav_tulisan">Blog</a></li>
                             <li><a href="resume.html"><span data-i18n="nav_resume">Resume</span> <span class="badge" data-i18n="nav_new">New</span></a></li>
                         </ul>
                     </div>
