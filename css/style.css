@@ -3401,7 +3401,7 @@ body.light-theme .editorial-sparkle {
 
 /* Modern Social-Themed Footer Styles */
 .modern-footer {
-    background: linear-gradient(180deg, transparent 0%, #ffbaba 12%, #ffbaba 100%);
+    background: linear-gradient(180deg, #ffbaba00 0%, #ffbaba 12%, #ffbaba 100%);
     border-radius: 0;
     padding: 140px 4% 40px;
     color: #111111;
@@ -3673,7 +3673,7 @@ body.light-theme .editorial-sparkle {
 
 /* Light Theme overrides for Footer to keep it beautiful */
 body.light-theme .modern-footer {
-    background: linear-gradient(180deg, transparent 0%, #ffbaba 12%, #ffbaba 100%);
+    background: linear-gradient(180deg, #ffbaba00 0%, #ffbaba 12%, #ffbaba 100%);
 }
 
 /* Override text colors for pink footer */
