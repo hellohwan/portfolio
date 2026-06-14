@@ -1,3 +1,21 @@
+// --- BULLETPROOF GLOBAL LOADER FALLBACK ---
+const forceHideLoader = function() {
+    const l = document.getElementById('page-loader');
+    if (l) {
+        l.style.opacity = '0';
+        l.style.visibility = 'hidden';
+        setTimeout(function() { l.style.display = 'none'; }, 300);
+    }
+};
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    forceHideLoader();
+} else {
+    document.addEventListener('DOMContentLoaded', forceHideLoader);
+    window.addEventListener('load', forceHideLoader);
+}
+setTimeout(forceHideLoader, 800);
+// ------------------------------------------
+
 document.addEventListener('DOMContentLoaded', () => {
     // Scroll header wrapper sticky behavior
     const headerWrapper = document.querySelector('.header-wrapper');
@@ -255,37 +273,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
-    // Page Loader Logic — robust version with fallback timeout
-    const hideLoader = (() => {
-        let called = false;
-        return () => {
-            if (called) return;
-            called = true;
-            const loader = document.getElementById('page-loader');
-            if (loader) {
-                loader.style.opacity = '0';
-                loader.style.visibility = 'hidden';
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                    showMoodTracker();
-                }, 300);
-            } else {
-                showMoodTracker();
-            }
-        };
-    })();
-
-    // Trigger on window load or DOMContentLoaded (whichever happens reasonably fast)
-    window.addEventListener('load', hideLoader);
-    document.addEventListener('DOMContentLoaded', hideLoader);
-
-    // If DOM is already loaded before this script runs, hide immediately
-    if (document.readyState === 'interactive' || document.readyState === 'complete') {
-        hideLoader();
-    }
-
-    // Hard fallback — force-hide after 0.5s to ensure fast loading feel no matter what
-    setTimeout(hideLoader, 500);
+    // Trigger mood tracker after a slight delay since loader is handled globally
+    setTimeout(showMoodTracker, 600);
 
     // Custom Tennis Cursor Logic
     if (window.innerWidth > 768) {
@@ -722,7 +711,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             footerObserver.observe(footerEl);
         }
-    });
+    }
 });
 
 // Register Service Worker for aggressive caching (Lighthouse fix)
